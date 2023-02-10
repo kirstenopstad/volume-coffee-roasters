@@ -5,7 +5,8 @@ const Detail = ({ item }) => {
   
   return (
     <React.Fragment>
-      <div>
+      <div className="Detail">
+        <h3>Detail</h3>
         <h4>{item.name}</h4>
         <p>{item.blend}</p>
         <p>{item.price}</p>
