@@ -9,8 +9,10 @@ const Detail = ({ item }) => {
         <h3>Detail</h3>
         <h4>{item.name}</h4>
         <p>{item.blend}</p>
-        <p>{item.price}</p>
+        <p>${item.price}</p>
         <p>{item.origin}</p>
+        <p>Units in Stock:{item.unitsInStock}</p>
+        <p>Pounds in Stock: {item.poundsInStock}</p>
       </div>
     </React.Fragment>
   )
