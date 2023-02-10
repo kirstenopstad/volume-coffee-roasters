@@ -8,8 +8,6 @@ const List = ({ inventory, onItemClick }) => {
       {inventory.map((item) => (
         // TODO: fix this, getting error InventoryControl.js:21 Uncaught TypeError: Cannot read properties of undefined (reading 'state')
         // at handleDisplayDetail (InventoryControl.js:21:1)
-        // at onClick (List.js:9:1)
-        // at HTMLUnknownElement.callCallback (react-dom.development.js:4164:1)
         <div key={item.id} onClick={() => onItemClick(item.id)}>
           <h4>{item.name}</h4>
           <p>{item.blend}</p>
