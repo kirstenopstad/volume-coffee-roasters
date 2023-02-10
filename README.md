@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Coffee Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By Kirsten Opstad
 
-## Available Scripts
+#### A web app built in React that tracks inventory for a fictional coffee shop
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+* JavaScript
+* React
+* Bootstrap
+* Vite
+* HTML
+* CSS
+* webpack
+* Node.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+__Prompt__
 
-### `npm test`
+At our coffee shop, we sell coffee beans in 1-pound servings, and we get our coffee delivered in large burlap sacks. Here are the details:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* we sell multiple types of coffee beans, each in different burlap sacks
+* one burlap sack contains 130 pounds of coffee beans
+* every sale decrements one pound of coffee beans from the burlap sack, until it is empty
 
-### `npm run build`
+__Before getting started, plan out your application and draw a component tree or component diagram that shows the structure of your components. This is a requirement for the project and should be included in your README__.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You are only expected to add CREATE, READ, and UPDATE functionality, though you are welcome to implement DELETE functionality as well. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Objectives (MVP)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application should have the following functionality:
+* As a user, I want to see a list/menu of all available types of coffee beans.
+* For each item, I want to see its name, origin, price, and roast (light, medium, or dark) of the coffee bean. (You are welcome to include anything additional that is relevant to the product your store carries.)
+* As a user, I want to submit a form to add a new burlap sack of coffee to the inventory.
+* As a user, I want to be able to click on a burlap sack to see its detail page.
+* As a user, I want to see how many pounds of coffee beans are left in a burlap sack. A burlap sack has roughly 130 pounds.
+* As a user, I want to be able to click a button to sell a pound of coffee beans. This should decrease the number of pounds left by 1. The number of pounds in a sack of coffee beans should not be able to go below 0.
 
-### `npm run eject`
+Additionally, code will be reviewed for the following objectives:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Application compiles and runs without error, and warnings in the DevTools console are resolved.
+2. Functional and class components are used correctly.
+3. Application effectively uses local and shared state.
+4. Props are used correctly and always include PropTypes.
+5. README includes an accurate representation of the application's component tree.
+6. Project is in a polished, portfolio-quality state.
+7. The prompt’s required functionality and baseline project requirements are in place by the deadline.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Further Exploration (Stretch Goals)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+__User stories:__
+* As a user, I want the option to edit a coffee sack's properties after entering them just in case I make a mistake.
+* As a user, I want to be able to delete a coffee sack.
+* As a user, I want a coffee sack to update to say "Out of Stock" once it's empty.
+* As a user, I want coffee sacks with less than 10 pounds to include a message that says "Almost Empty" so I can buy a pound of it before it's gone!
+* As a user, I want to have coffee prices to be color-coded for easy readability. This could be based on their price, their origin or roast, or the amount of pounds left.
+* As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Process 
+1. Created component drawing
+![Component Drawing](./src/img/#)
+2. Establish Component Hierarchy:
+    * App.jsx
+3. Build Static Components
+4. Add State
+5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
 
-## Learn More
+<!-- [x] Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshots](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.03bZmDGXaBhBYyxxp3Ls3gHaEA%26pid%3DApi&f=1&ipt=e980d57210242747a51c41421e1f09a6de3b1fdaeaadd297496787bb64e80c88&ipo=images) -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- [Link to operational site](http://www.kirstenopstad.github.com/<REPOSITORY NAME>) -->
 
-### Code Splitting
+### Goals
+1. Meet MVP
+2. Add styling to match inspiration
+3. Stretch: add cart feature
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Setup/Installation Requirements
 
-### Analyzing the Bundle Size
+* Clone this repo to your workspace.
+* Navigate to the top level of the directory.
+* In the root directory of the project, run this command to install all packages listed in the package.json:
+```
+$ npm install
+```
+* Then, to build and serve the project, run: 
+```
+$ npm run start
+```
+To run tests with Jest, run:
+```
+$ npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Known Bugs
 
-### Making a Progressive Web App
+* No known bugs. If you find one, please email me at kirsten.opstad@gmail.com with the subject **[_Repo Name_] Bug** and include:
+  * BUG: _A brief description of the bug_
+  * FIX: _Suggestion for solution (if you have one!)_
+  * If you'd like to be credited, please also include your **_github user profile link_**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Copyright (c) 2022 Kirsten Opstad
 
-### Deployment
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
