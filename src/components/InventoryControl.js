@@ -12,8 +12,7 @@ class InventoryControl extends React.Component {
       inventory: [...inventorySeedData],
       selectedItem: null,
       displayInventory: true,
-      displayDetail: false,
-      displayAdd: false,
+      displayAdd: false
     }
   }
 
@@ -22,16 +21,31 @@ class InventoryControl extends React.Component {
     this.setState({selectedItem: detailItem})
   }
 
+  handleAddItem = (item) => {
+    const updatedInventory = this.state.inventory.concat(item);
+    this.setState({inventory: updatedInventory})
+  }
+
   render() {
     let detail = null;
+    let list = null;
+    
+    if (this.state.displayAdd){
+    } 
+    
     if (this.state.selectedItem !== null) {
       detail = <Detail item={this.state.selectedItem}/>
     }
+    
+    if (this.state.displayInventory) {
+      list = <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>
+    }
+    
     return(
       <React.Fragment>
-        <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>
-        {detail}
         <Add />
+        {detail}
+        {list}
       </React.Fragment>
     );
   }
