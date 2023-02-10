@@ -63,9 +63,9 @@ __User stories:__
 [![Component Drawing](./src/img/component_diagram.png)](https://www.figma.com/file/9yZdrlZDInV6346toTdG2Z/CoffeeShop?node-id=0%3A1&t=SaS3WUYroyADmYHv-1)
 2. Establish Component Hierarchy:
     * App.js
-      * Header.js 
+      * ✅ Header.js 
       * InventoryControl.js - displays either list, detail, add or edit
-        * List.js – displays all items in inventory
+        * ✅ List.js – displays all items in inventory
         * Detail.js – displays details for single in inventory
         * Add.js – form to add new item to inventory
         <!-- Strech Components -->
