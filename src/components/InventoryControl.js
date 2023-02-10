@@ -4,14 +4,37 @@ import List from  './List';
 import Detail from './Detail';
 import Add from './Add';
 
-const InventoryControl = () => {
-  const detailItem = inventorySeedData[0];
-  return(
-    <React.Fragment>
-      <List inventory={inventorySeedData}/>
-      <Detail item={detailItem}/>
-      <Add />
-    </React.Fragment>
-  );
+class InventoryControl extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      inventory: [...inventorySeedData],
+      selectedItem: null,
+      displayInventory: true,
+      displayDetail: false,
+      displayAdd: false,
+    }
+  }
+
+  handleDisplayDetail(id) {
+    const detailItem = this.state.inventory.filter( element => element.id === id)[0];
+    this.setState({selectedItem: detailItem})
+  }
+
+  render() {
+    // const detailItem = this.state.inventory[0];
+    let detail = null;
+    if (this.state.selectedItem !== null) {
+      const detail = <Detail item={this.state.selectedItem}/>
+    }
+    return(
+      <React.Fragment>
+        <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>
+        {detail}
+        <Add />
+      </React.Fragment>
+    );
+  }
 }
 export default InventoryControl;

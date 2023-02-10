@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const List = ({ inventory }) => {
+const List = ({ inventory, onItemClick }) => {
   
   return (
     <React.Fragment>
-      {inventory.map((item, index) => (
-        <div key={index}>
+      {inventory.map((item) => (
+        // TODO: fix this, getting error InventoryControl.js:21 Uncaught TypeError: Cannot read properties of undefined (reading 'state')
+        // at handleDisplayDetail (InventoryControl.js:21:1)
+        // at onClick (List.js:9:1)
+        // at HTMLUnknownElement.callCallback (react-dom.development.js:4164:1)
+        <div key={item.id} onClick={() => onItemClick(item.id)}>
           <h4>{item.name}</h4>
           <p>{item.blend}</p>
           <p>{item.price}</p>
@@ -19,6 +23,7 @@ const List = ({ inventory }) => {
 }
 
 List.propTypes = {
-  inventory: PropTypes.array
+  inventory: PropTypes.array,
+  onItemClick: PropTypes.func
 }
 export default List;

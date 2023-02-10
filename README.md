@@ -31,8 +31,8 @@ You are only expected to add CREATE, READ, and UPDATE functionality, though you 
 ### Objectives (MVP)
 
 The application should have the following functionality:
-* As a user, I want to see a list/menu of all available types of coffee beans.
-* For each item, I want to see its name, origin, price, and roast (light, medium, or dark) of the coffee bean. (You are welcome to include anything additional that is relevant to the product your store carries.)
+* ✅ As a user, I want to see a list/menu of all available types of coffee beans.
+* ✅ For each item, I want to see its name, origin, price, and roast (light, medium, or dark) of the coffee bean. (You are welcome to include anything additional that is relevant to the product your store carries.)
 * As a user, I want to submit a form to add a new burlap sack of coffee to the inventory.
 * As a user, I want to be able to click on a burlap sack to see its detail page.
 * As a user, I want to see how many pounds of coffee beans are left in a burlap sack. A burlap sack has roughly 130 pounds.
