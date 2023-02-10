@@ -68,7 +68,8 @@ __User stories:__
         * List.js – displays all items in inventory
         * Detail.js – displays details for single in inventory
         * Add.js – form to add new item to inventory
-        * Edit.js – form to edit item in inventory
+        <!-- Strech Components -->
+        <!-- * Edit.js – form to edit item in inventory -->
 3. Build Static Components
 4. Add State
 5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
