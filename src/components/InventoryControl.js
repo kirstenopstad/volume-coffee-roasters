@@ -28,7 +28,7 @@ class InventoryControl extends React.Component {
 
   render() {
     let detail = null;
-    let list = null;
+    let list = <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>;
     
     if (this.state.displayAdd){
     } 
@@ -37,13 +37,9 @@ class InventoryControl extends React.Component {
       detail = <Detail item={this.state.selectedItem}/>
     }
     
-    if (this.state.displayInventory) {
-      list = <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>
-    }
-    
     return(
       <React.Fragment>
-        <Add />
+        <Add onAddClick={this.handleAddItem}/>
         {detail}
         {list}
       </React.Fragment>
