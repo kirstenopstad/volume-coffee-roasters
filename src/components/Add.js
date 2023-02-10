@@ -11,8 +11,6 @@ const Add = ({ onAddClick }) => {
       origin: event.target.origin.value,
       price: parseInt(event.target.price.value),
       roast: event.target.roast.value,
-      unitsInStock: parseInt(event.target.units.value),
-      poundsInStock: (parseInt(event.target.units.value) * 130),
       id: v4()
     }
     onAddClick(newItem);
@@ -25,7 +23,6 @@ const Add = ({ onAddClick }) => {
       <input type="text" placeholder="Origin" name="origin"/>
       <input type="number" placeholder="Price" name="price"/>
       <input type="text" placeholder="Roast" name="roast"/>
-      <input type="number" placeholder="Units in Stock" name="units"/>
       <button type="submit">Add</button>
     </form>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import inventorySeedData from "./InventorySeedData";
-import List from  './List';
+import Item from  './Item';
 import Detail from './Detail';
 import Add from './Add';
 
@@ -25,10 +25,29 @@ class InventoryControl extends React.Component {
     const updatedInventory = this.state.inventory.concat(item);
     this.setState({inventory: updatedInventory})
   }
+  
+  handleQuickSale = (item) => {
+    const updatedInventory = this.state.inventory.concat(item);
+    this.setState({inventory: updatedInventory})
+    // const poundsOfItemToSell = this.state.inventory.filter(element => element.id === id)[0].poundsInStock;
+    // this.setState(prevState => ({ poundsOfItemToSell: prevState.poundsOfItemToSell++ })
+  }
 
   render() {
     let detail = null;
-    let list = <List inventory={this.state.inventory} onItemClick={this.handleDisplayDetail}/>;
+    let item = this.state.inventory.map((element) => (
+      <Item 
+        name={element.name}
+        origin={element.origin}
+        price={element.price}
+        roast={element.roast}
+        unitsInStock={element.unitsInStock}
+        poundsInStock={element.poundsInStock}
+        id={element.id}
+        key={element.id} 
+        onItemClick={this.handleDisplayDetail}
+        onQuickSellClick={this.handleQuickSale}/>
+    ))
     
     if (this.state.displayAdd){
     } 
@@ -41,7 +60,7 @@ class InventoryControl extends React.Component {
       <React.Fragment>
         <Add onAddClick={this.handleAddItem}/>
         {detail}
-        {list}
+        {item}
       </React.Fragment>
     );
   }

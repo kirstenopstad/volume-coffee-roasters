@@ -12,7 +12,7 @@ const Detail = ({ item }) => {
         <p>${item.price}</p>
         <p>{item.origin}</p>
         <p>Units in Stock:{item.unitsInStock}</p>
-        <p>Pounds in Stock: {item.poundsInStock}</p>
+        <p>Pounds in Stock: {item.poundsInStock} lbs.</p>
       </div>
     </React.Fragment>
   )
