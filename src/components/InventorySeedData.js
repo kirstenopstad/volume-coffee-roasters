@@ -6,7 +6,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 17,
   roast: "dark",
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -14,7 +15,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 17,
   roast: "medium", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -22,7 +24,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 17,
   roast: "medium", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -30,7 +33,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 16,
   roast: "dark", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -38,7 +42,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 16,
   roast: "light", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -46,7 +51,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 17,
   roast: "medium", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 },
 {
@@ -54,7 +60,8 @@ const InventorySeedData = [{
   origin: "Blend",
   price: 17,
   roast: "light", 
-  inStock: 0,
+  unitsInStock: 0,
+  poundsInStock: 0,
   id: v4()
 }
 
