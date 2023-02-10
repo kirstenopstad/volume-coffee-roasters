@@ -64,14 +64,16 @@ __User stories:__
 2. Establish Component Hierarchy:
     * App.js
       * ✅ Header.js 
-      * InventoryControl.js - displays either list, detail, add or edit
+      * ✅ InventoryControl.js - displays either list, detail, add or edit
         * ✅ List.js – displays all items in inventory
-        * Detail.js – displays details for single in inventory
-        * Add.js – form to add new item to inventory
+        * ✅ Detail.js – displays details for single in inventory
+        * ✅ Add.js – form to add new item to inventory
         <!-- Strech Components -->
         <!-- * Edit.js – form to edit item in inventory -->
-3. Build Static Components
+3. ✅ Build Static Components
 4. Add State
+  * Local State to display either list, detail or add
+  * Shared State to allow Create & Update Functionality
 5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
 
 <!-- [x] Screenshots
