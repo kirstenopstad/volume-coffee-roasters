@@ -17,16 +17,15 @@ class InventoryControl extends React.Component {
     }
   }
 
-  handleDisplayDetail(id) {
-    const detailItem = this.state.inventory.filter( element => element.id === id)[0];
+  handleDisplayDetail = (id) => {
+    const detailItem = this.state.inventory.filter(element => element.id === id)[0];
     this.setState({selectedItem: detailItem})
   }
 
   render() {
-    // const detailItem = this.state.inventory[0];
     let detail = null;
     if (this.state.selectedItem !== null) {
-      const detail = <Detail item={this.state.selectedItem}/>
+      detail = <Detail item={this.state.selectedItem}/>
     }
     return(
       <React.Fragment>
