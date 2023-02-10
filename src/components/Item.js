@@ -9,6 +9,23 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
     stock = poundsInStock;
   }
 
+  const handleSellClick = (event) => {
+    event.preventDefault();
+
+    let pounds = (parseInt(poundsInStock) - 1 )
+
+    const updatedItem = {
+      name: name,
+      origin: origin,
+      price: price,
+      roast: roast,
+      poundsInStock: pounds,
+      id: id
+    }
+    onQuickSellClick(updatedItem)
+  }
+
+
   return (
     <React.Fragment>
       <div onClick={() => onItemClick(id)}>
@@ -17,6 +34,9 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
         <p>${price}</p>
         <p>{roast}</p>
       </div>
+      <form onClick={handleSellClick}>
+        <button type="submit">Sell</button>
+      </form>
     </React.Fragment>
   )
 }

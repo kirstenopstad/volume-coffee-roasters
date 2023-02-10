@@ -20,13 +20,22 @@ class InventoryControl extends React.Component {
     const detailItem = this.state.inventory.filter(element => element.id === id)[0];
     this.setState({selectedItem: detailItem})
   }
-
+  
   handleAddItem = (item) => {
     const updatedInventory = this.state.inventory.concat(item);
     this.setState({inventory: updatedInventory})
   }
   
+  handleUpdateItem = (item) => {
+    const id = item.id;
+    const updatedInventory = this.state.inventory
+                                        .filter(element => element.id !== id)
+                                        .concat(item);
+    this.setState({inventory: updatedInventory})
+  }
+  
   handleQuickSale = (item) => {
+    // this.setState(prevState => ({ inventory.filter(element => element.id === id)[0][poundsInStock]: })
     const updatedInventory = this.state.inventory.concat(item);
     this.setState({inventory: updatedInventory})
     // const poundsOfItemToSell = this.state.inventory.filter(element => element.id === id)[0].poundsInStock;
@@ -35,15 +44,16 @@ class InventoryControl extends React.Component {
 
   render() {
     let detail = null;
-    let item = this.state.inventory.map((element) => (
+    let itemList = this.state.inventory.map((element) => (
       <Item 
-        name={element.name}
-        origin={element.origin}
-        price={element.price}
-        roast={element.roast}
-        unitsInStock={element.unitsInStock}
-        poundsInStock={element.poundsInStock}
-        id={element.id}
+        // name={element.name}
+        // origin={element.origin}
+        // price={element.price}
+        // roast={element.roast}
+        // unitsInStock={element.unitsInStock}
+        // poundsInStock={element.poundsInStock}
+        // id={element.id}
+        item={element}
         key={element.id} 
         onItemClick={this.handleDisplayDetail}
         onQuickSellClick={this.handleQuickSale}/>
@@ -60,7 +70,7 @@ class InventoryControl extends React.Component {
       <React.Fragment>
         <Add onAddClick={this.handleAddItem}/>
         {detail}
-        {item}
+        {itemList}
       </React.Fragment>
     );
   }
