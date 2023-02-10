@@ -2,14 +2,13 @@
 
 #### By Kirsten Opstad
 
-#### A web app built in React that tracks inventory for a fictional coffee shop
+#### A web app that tracks inventory for a fictional coffee shop
 
 ## Technologies Used
 
-* JavaScript
 * React
+* JavaScript
 * Bootstrap
-* Vite
 * HTML
 * CSS
 * webpack
@@ -60,10 +59,16 @@ __User stories:__
 * As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
 ## Process 
-1. Created component drawing
-![Component Drawing](./src/img/#)
+1. Create component drawing
+[![Component Drawing](./src/img/component_diagram.png)](https://www.figma.com/file/9yZdrlZDInV6346toTdG2Z/CoffeeShop?node-id=0%3A1&t=SaS3WUYroyADmYHv-1)
 2. Establish Component Hierarchy:
-    * App.jsx
+    * App.js
+      * Header.js 
+      * InventoryControl.js - displays either list, detail, add or edit
+        * List.js – displays all items in inventory
+        * Detail.js – displays details for single in inventory
+        * Add.js – form to add new item to inventory
+        * Edit.js – form to edit item in inventory
 3. Build Static Components
 4. Add State
 5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
