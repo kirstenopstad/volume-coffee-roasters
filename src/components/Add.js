@@ -3,6 +3,7 @@ import React from "react";
 const Add = () => {
   return(
     <form>
+      <h3>Add</h3>
       <input type="text" placeholder="Name" name="name"/>
       <input type="text" placeholder="Origin" name="origin"/>
       <input type="number" placeholder="Price" name="price"/>
