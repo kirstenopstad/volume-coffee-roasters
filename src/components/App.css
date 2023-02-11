@@ -1,3 +1,7 @@
+img {
+  max-width: 200px;
+}
+
 .Site {
   background-color: #F6F5F4;
 }
@@ -17,6 +21,9 @@
 }
 .itemList {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .add-form {

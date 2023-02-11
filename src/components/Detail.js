@@ -7,6 +7,7 @@ const Detail = ({ item }) => {
     <React.Fragment>
       <div className="Detail">
         <h3>Detail</h3>
+        <img src={item.image} />
         <h4>{item.name}</h4>
         <p>{item.blend}</p>
         <p>${item.price}</p>

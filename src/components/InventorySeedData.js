@@ -1,5 +1,11 @@
 import React from "react";
 import { v4 } from 'uuid';
+import founders from './../img/beans/founders.png';
+import french from './../img/beans/french-roast.png';
+import hair from './../img/beans/hair-bender.png';
+import holler from './../img/beans/holler-mtn.png';
+import hundred from './../img/beans/hundred-mile.png';
+import trapper from './../img/beans/trapper-creek.png';
 
 const InventorySeedData = [{
   name: "French Roast",
@@ -7,6 +13,7 @@ const InventorySeedData = [{
   price: 17,
   roast: "dark",
   poundsInStock: 130,
+  image: french,
   id: v4()
 },
 {
@@ -15,6 +22,7 @@ const InventorySeedData = [{
   price: 17,
   roast: "medium", 
   poundsInStock: 130,
+  image: holler,
   id: v4()
 },
 {
@@ -23,6 +31,7 @@ const InventorySeedData = [{
   price: 17,
   roast: "medium", 
   poundsInStock: 130,
+  image: founders,
   id: v4()
 },
 {
@@ -31,14 +40,7 @@ const InventorySeedData = [{
   price: 16,
   roast: "dark", 
   poundsInStock: 130,
-  id: v4()
-},
-{
-  name: "Homestead",
-  origin: "Blend",
-  price: 16,
-  roast: "light", 
-  poundsInStock: 130,
+  image: hair,
   id: v4()
 },
 {
@@ -47,6 +49,7 @@ const InventorySeedData = [{
   price: 17,
   roast: "medium", 
   poundsInStock: 130,
+  image: trapper,
   id: v4()
 },
 {
@@ -55,6 +58,7 @@ const InventorySeedData = [{
   price: 17,
   roast: "light", 
   poundsInStock: 130,
+  image: hundred,
   id: v4()
 }
 

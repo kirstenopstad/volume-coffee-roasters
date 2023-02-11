@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQuickSellClick}) => {
+const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick, onQuickSellClick}) => {
   
   let stock = "";
   if (poundsInStock === 0) {
@@ -29,6 +29,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
   return (
     <React.Fragment>
       <div onClick={() => onItemClick(id)}>
+        <img src={img}/>
         <h4>{name}</h4>
         <p>{origin}</p>
         <p>${price}</p>
