@@ -25,18 +25,20 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory})
   }
   
-  // handleUpdateItem = (item) => {
-  //   const id = item.id;
-  //   const updatedInventory = this.state.inventory
-  //                                       .filter(element => element.id !== id)
-  //                                       .concat(item);
-  //   this.setState({inventory: updatedInventory})
-  // }
+  handleUpdateItem = (item) => {
+    const id = item.id;
+    const updatedInventory = this.state.inventory
+                                        .filter(element => element.id !== id)
+                                        .concat(item);
+    this.setState({inventory: updatedInventory})
+  }
   
-  // handleQuickSale = (item) => {
-  //   const updatedInventory = this.state.inventory.concat(item);
-  //   this.setState({inventory: updatedInventory})
-  // }
+  handleQuickSale = (item) => {
+    const id = item.id;
+    // get inventory from state, minus element with matching id, then add updated - thus replacing original
+    const updatedInventory = this.state.inventory.filter(element => element.id !== id).concat(item);
+    this.setState({inventory: updatedInventory})
+  }
 
   render() {
     let detail = null;
