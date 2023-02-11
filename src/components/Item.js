@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick, onQuickSellClick}) => {
   
@@ -28,16 +30,21 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
 
   return (
     <React.Fragment>
-      <div onClick={() => onItemClick(id)}>
-        <img src={img}/>
-        <h4>{name}</h4>
-        <p>{origin}</p>
-        <p>${price}</p>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={img} onClick={() => onItemClick(id)}/>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <p>{origin} ${price}</p>
         <p>{roast}</p>
       <form onClick={handleSellClick}>
-        <button type="submit">Sell</button>
+        <Button variant="secondary" type="submit">Sell</Button>
       </form>
-      </div>
+      </Card.Body>
+    </Card>
     </React.Fragment>
   )
 }

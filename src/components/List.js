@@ -1,13 +1,12 @@
 import React from "react";
 import Item from './Item';
 import PropTypes from 'prop-types';
-import Table from 'react-bootstrap/Table';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 
 const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
   return (
     <React.Fragment>
+      
       <div className="itemList">
         {items.map((element) =>  
           <Item 

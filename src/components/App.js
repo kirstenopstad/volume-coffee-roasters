@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 function App() {
   return (
     <React.Fragment>
-      <Container>
+      <Container fluid="true">
         <div className='Site'>
           <Header />
           <InventoryControl />
