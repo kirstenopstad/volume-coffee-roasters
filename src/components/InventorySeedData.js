@@ -14,6 +14,7 @@ const InventorySeedData = [{
   roast: "Dark",
   poundsInStock: 130,
   image: french,
+  summary: "Keep it simple and fresh with a rotation of our iconic blends. We’ll send a new selection every two weeks, so you can say bye-bye to wasting away in the coffee aisle of your local grocery.",
   id: v4()
 },
 {
@@ -23,6 +24,7 @@ const InventorySeedData = [{
   roast: "Medium", 
   poundsInStock: 130,
   image: holler,
+  summary: "This organic blend has been a hometown favorite since day one. It’s got the complexity to pour a great espresso yet the versatility to serve as your daily cup of drip.",
   id: v4()
 },
 {
@@ -32,6 +34,7 @@ const InventorySeedData = [{
   roast: "Medium", 
   poundsInStock: 130,
   image: founders,
+  summary: "A smooth, all-day drinker, Founder's Blend combines certified organic coffees from Central and South America for a taste of sunshine in a cup.",
   id: v4()
 },
 {
@@ -41,6 +44,7 @@ const InventorySeedData = [{
   roast: "Dark", 
   poundsInStock: 130,
   image: hair,
+  summary: "The sweet and balanced coffee that started it all. Hair Bender is our most celebrated blend with a flavor profile that shines no matter how you brew it.",
   id: v4()
 },
 {
@@ -50,6 +54,7 @@ const InventorySeedData = [{
   roast: "Medium", 
   poundsInStock: 130,
   image: trapper,
+  summary: "Finally, decaf coffee beans that hold their own. Using the Swiss Water Process to decaffeinate carefully sourced coffees, we achieve unparalleled flavor and cup quality.",
   id: v4()
 },
 {
@@ -59,6 +64,7 @@ const InventorySeedData = [{
   roast: "Light", 
   poundsInStock: 130,
   image: hundred,
+  summary: "Hundred Mile is a pleasant, balanced blend of certified organic coffees that will cut a clean line right through your day, no matter what time you get things started.",
   id: v4()
 }
 

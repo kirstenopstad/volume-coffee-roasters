@@ -4,9 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 const Header = () => {
   return(
     <React.Fragment>
-      <div className="Header">
+      <div className="header">
         <h1>Stumptown <span className="sub-heading">Coffee Roasters</span></h1>
-        <Nav className="Navigation">
+        <Nav className="navigation">
           <Nav.Item>
             <Nav.Link href="#">Coffee</Nav.Link>
           </Nav.Item>

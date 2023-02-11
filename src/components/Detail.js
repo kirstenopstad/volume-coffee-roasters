@@ -35,10 +35,10 @@ const Detail = ({ item, onClose }) => {
             </tr>
           </tbody>
         </Table>
-
-        <Button disabled>Update</Button>
-        <Button disabled>Delete</Button>
-        <Button disabled>Restock</Button>
+        <p>{item.summary}</p>
+        {/* <Button disabled>Update</Button> */}
+        {/* <Button disabled>Delete</Button> */}
+        {/* <Button disabled>Restock</Button> */}
         
       </div>
     </React.Fragment>

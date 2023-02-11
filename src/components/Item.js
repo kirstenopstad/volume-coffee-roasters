@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
-const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick, whenSellClicked}) => {
+const Item = ({ name, origin, price, roast, poundsInStock, id, img, summary, onItemClick, whenSellClicked}) => {
   
   let stock = "";
   let sellButtonText = "";
@@ -53,8 +53,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {summary}
             </Card.Text>
             <p>{origin} ${price} {roast}</p>
             <p>{stock}</p>
@@ -76,6 +75,7 @@ Item.propTypes = {
   roast: PropTypes.string, 
   unitsInStock: PropTypes.number,
   poundsInStock: PropTypes.number,
+  summary: PropTypes.string,
   id: PropTypes.string,
   onItemClick: PropTypes.func,
   whenSellClicked: PropTypes.func

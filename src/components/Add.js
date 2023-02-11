@@ -17,6 +17,7 @@ const Add = ({ onAddClick }) => {
       origin: event.target.origin.value,
       price: parseInt(event.target.price.value),
       roast: event.target.roast.value,
+      summary: event.target.summary.value,
       poundsInStock: 130,
       image: placeholderImage,
       id: v4()
@@ -43,6 +44,10 @@ const Add = ({ onAddClick }) => {
         <Form.Group className="mb-3">
           <Form.Label>Roast</Form.Label>
           <Form.Control placeholder="Dark, Medium, Light" name="roast" />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Profile</Form.Label>
+          <Form.Control as="textarea" rows={3} placeholder="Describe the flavor profile." name="summary" />
         </Form.Group>
         <Button type="submit">Add</Button>
       </Form>

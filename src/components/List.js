@@ -16,6 +16,7 @@ const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
           unitsInStock={element.unitsInStock}
           poundsInStock={element.poundsInStock}
           img={element.image}
+          summary={element.summary}
           id={element.id}
           key={element.id} 
           onItemClick={onItemClick}
