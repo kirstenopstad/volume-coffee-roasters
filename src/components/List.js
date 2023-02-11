@@ -1,13 +1,12 @@
 import React from "react";
 import Item from './Item';
 import PropTypes from 'prop-types';
-
+import Row from 'react-bootstrap/Row';
 
 const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
   return (
     <React.Fragment>
-      
-      <div className="itemList">
+      <Row xs={1} md={2} className="g-4">
         {items.map((element) =>  
           <Item 
           name={element.name}
@@ -23,7 +22,8 @@ const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
           onQuickSellClick={onQuickSellClick} />
           )
         }
-      </div>
+      </Row>
+      {/* </CardGroup> */}
     </React.Fragment>    
   );
 }
