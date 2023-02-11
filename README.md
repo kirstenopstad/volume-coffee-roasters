@@ -36,7 +36,7 @@ The application should have the following functionality:
 * ✅ As a user, I want to submit a form to add a new burlap sack of coffee to the inventory.
 * ✅ As a user, I want to be able to click on a burlap sack to see its detail page.
 * ✅ As a user, I want to see how many pounds of coffee beans are left in a burlap sack. A burlap sack has roughly 130 pounds.
-* As a user, I want to be able to click a button to sell a pound of coffee beans. This should decrease the number of pounds left by 1. The number of pounds in a sack of coffee beans should not be able to go below 0.
+* ✅ As a user, I want to be able to click a button to sell a pound of coffee beans. This should decrease the number of pounds left by 1. The number of pounds in a sack of coffee beans should not be able to go below 0.
 
 Additionally, code will be reviewed for the following objectives:
 
@@ -71,9 +71,9 @@ __User stories:__
         <!-- Strech Components -->
         <!-- * Edit.js – form to edit item in inventory -->
 3. ✅ Build Static Components
-4. Add State
+4. ✅ Add State
   * Local State to display either list, detail or add
-  * Shared State to allow Create & Update Functionality
+  * ✅ Shared State to allow Create & Update Functionality
 5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
 
 <!-- [x] Screenshots
