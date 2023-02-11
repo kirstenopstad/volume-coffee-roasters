@@ -11,7 +11,7 @@ const InventorySeedData = [{
   name: "French Roast",
   origin: "Blend",
   price: 17,
-  roast: "dark",
+  roast: "Dark",
   poundsInStock: 130,
   image: french,
   id: v4()
@@ -20,7 +20,7 @@ const InventorySeedData = [{
   name: "Holler Mountain",
   origin: "Blend",
   price: 17,
-  roast: "medium", 
+  roast: "Medium", 
   poundsInStock: 130,
   image: holler,
   id: v4()
@@ -29,7 +29,7 @@ const InventorySeedData = [{
   name: "Founder's Blend",
   origin: "Blend",
   price: 17,
-  roast: "medium", 
+  roast: "Medium", 
   poundsInStock: 130,
   image: founders,
   id: v4()
@@ -38,7 +38,7 @@ const InventorySeedData = [{
   name: "Hair Bender",
   origin: "Blend",
   price: 16,
-  roast: "dark", 
+  roast: "Dark", 
   poundsInStock: 130,
   image: hair,
   id: v4()
@@ -47,7 +47,7 @@ const InventorySeedData = [{
   name: "Trapper Creek Decaf",
   origin: "Blend",
   price: 17,
-  roast: "medium", 
+  roast: "Medium", 
   poundsInStock: 130,
   image: trapper,
   id: v4()
@@ -56,7 +56,7 @@ const InventorySeedData = [{
   name: "Hundred Mile",
   origin: "Blend",
   price: 17,
-  roast: "light", 
+  roast: "Light", 
   poundsInStock: 130,
   image: hundred,
   id: v4()
