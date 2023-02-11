@@ -25,25 +25,25 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory})
   }
   
-  handleUpdateItem = (item) => {
-    const id = item.id;
-    const updatedInventory = this.state.inventory
-                                        .filter(element => element.id !== id)
-                                        .concat(item);
-    this.setState({inventory: updatedInventory})
-  }
+  // handleUpdateItem = (item) => {
+  //   const id = item.id;
+  //   const updatedInventory = this.state.inventory
+  //                                       .filter(element => element.id !== id)
+  //                                       .concat(item);
+  //   this.setState({inventory: updatedInventory})
+  // }
   
-  handleQuickSale = (item) => {
-    const updatedInventory = this.state.inventory.concat(item);
-    this.setState({inventory: updatedInventory})
-  }
+  // handleQuickSale = (item) => {
+  //   const updatedInventory = this.state.inventory.concat(item);
+  //   this.setState({inventory: updatedInventory})
+  // }
 
   render() {
     let detail = null;
-    let itemList = <List  
-                      item={this.inventory}
-                      onItemClick={this.handleDisplayDetail}
-                      onQuickSellClick={this.handleQuickSale}/>
+    let inventoryList = <List  
+                          items={this.state.inventory}
+                          onItemClick={this.handleDisplayDetail}
+                          onQuickSellClick={this.handleQuickSale}/>
     
     if (this.state.selectedItem !== null) {
       detail = <Detail item={this.state.selectedItem}/>
@@ -53,7 +53,7 @@ class InventoryControl extends React.Component {
       <React.Fragment>
         <Add onAddClick={this.handleAddItem}/>
         {detail}
-        {itemList}
+        {inventoryList}
       </React.Fragment>
     );
   }
