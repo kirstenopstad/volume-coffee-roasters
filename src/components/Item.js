@@ -15,7 +15,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
     sellButtonStatus = "disabled";
   } else {
     sellButtonText = "Sell";
-    sellButtonStatus = "secondary";
+    sellButtonStatus = "success";
     stock = poundsInStock + " lbs. in Stock" ;
   }
 

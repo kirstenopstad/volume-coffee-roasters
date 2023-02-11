@@ -3,7 +3,6 @@ import inventorySeedData from "./InventorySeedData";
 import List from  './List';
 import Detail from './Detail';
 import Add from './Add';
-// import Update from './Update';
 
 class InventoryControl extends React.Component {
 
@@ -40,7 +39,10 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory})
   }
 
+  
   render() {
+    
+    // conditional rendering
     let detail = null;
     let inventoryList = <List  
                           items={this.state.inventory}

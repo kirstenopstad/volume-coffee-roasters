@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-size: large;
 }
+
 .Site {
   background-color: #F6F5F4;
 }
@@ -25,13 +26,27 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
 }
 .detail {
-  background-color: lightblue;
+  max-width: 500px;
+  display: block;
+  margin:auto;
   padding: 1% 5% 5% 5%;
 }
+
+.detail-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 5px;
+}
+
 .itemList {
   display: block;
 }
 
 .add-form {
-  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
 }

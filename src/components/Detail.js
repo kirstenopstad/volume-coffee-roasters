@@ -8,10 +8,13 @@ const Detail = ({ item }) => {
   
   return (
     <React.Fragment>
-      <div className="Detail">
+      <div className="detail">
         <h3>Detail</h3>
+
         <Image src={item.image} fluid/>
+    
         <h4>{item.name}</h4>
+
         <Table>
           <thead>
             <tr>
@@ -30,9 +33,13 @@ const Detail = ({ item }) => {
             </tr>
           </tbody>
         </Table>
-        <Button>Update</Button>
-        <Button>Delete</Button>
-        <Button>Restock</Button>
+
+        <div className="detail-menu">
+        <Button disabled>Update</Button>
+        <Button disabled>Delete</Button>
+        <Button disabled>Restock</Button>
+        </div>
+        
       </div>
     </React.Fragment>
   )

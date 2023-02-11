@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
   return (
     <React.Fragment>
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={2} lg={3} className="g-4">
         {items.map((element) =>  
           <Item 
           name={element.name}
