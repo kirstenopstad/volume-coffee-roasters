@@ -5,7 +5,7 @@ const Header = () => {
   return(
     <React.Fragment>
       <div className="Header">
-        <h1>Stumptown Coffee Roasters</h1>
+        <h1>Stumptown <span className="sub-heading">Coffee Roasters</span></h1>
         <Nav className="Navigation">
           <Nav.Item>
             <Nav.Link href="#">Coffee</Nav.Link>

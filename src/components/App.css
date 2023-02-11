@@ -1,7 +1,16 @@
-img {
-  max-width: 200px;
+@font-face {
+  font-family: Windsor Regular;
+  src: url(./../fonts/WindsorRegular.ttf);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Windsor Regular';
+  text-transform: uppercase;
+}
+.sub-heading {
+  display: block;
+  font-size: large;
+}
 .Site {
   background-color: #F6F5F4;
 }
@@ -20,10 +29,7 @@ img {
   padding: 1% 5% 5% 5%;
 }
 .itemList {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
 }
 
 .add-form {
