@@ -61,7 +61,9 @@ class InventoryControl extends React.Component {
         <div className="detail">
           {detail}
         </div>
-        {inventoryList}
+        <div className="inventory-list">
+          {inventoryList}
+        </div>
       </React.Fragment>
     );
   }

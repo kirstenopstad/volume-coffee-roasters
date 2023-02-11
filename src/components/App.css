@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 5px;
 }
 
-.itemList {
-  display: block;
+.inventory-list {
+  background-color: blanchedalmond;
 }
 
 .add-form {
