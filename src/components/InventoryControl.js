@@ -1,8 +1,9 @@
 import React from "react";
 import inventorySeedData from "./InventorySeedData";
-import Item from  './Item';
+import List from  './List';
 import Detail from './Detail';
 import Add from './Add';
+// import Update from './Update';
 
 class InventoryControl extends React.Component {
 
@@ -11,8 +12,6 @@ class InventoryControl extends React.Component {
     this.state = {
       inventory: [...inventorySeedData],
       selectedItem: null,
-      displayInventory: true,
-      displayAdd: false
     }
   }
 
@@ -35,32 +34,16 @@ class InventoryControl extends React.Component {
   }
   
   handleQuickSale = (item) => {
-    // this.setState(prevState => ({ inventory.filter(element => element.id === id)[0][poundsInStock]: })
     const updatedInventory = this.state.inventory.concat(item);
     this.setState({inventory: updatedInventory})
-    // const poundsOfItemToSell = this.state.inventory.filter(element => element.id === id)[0].poundsInStock;
-    // this.setState(prevState => ({ poundsOfItemToSell: prevState.poundsOfItemToSell++ })
   }
 
   render() {
     let detail = null;
-    let itemList = this.state.inventory.map((element) => (
-      <Item 
-        // name={element.name}
-        // origin={element.origin}
-        // price={element.price}
-        // roast={element.roast}
-        // unitsInStock={element.unitsInStock}
-        // poundsInStock={element.poundsInStock}
-        // id={element.id}
-        item={element}
-        key={element.id} 
-        onItemClick={this.handleDisplayDetail}
-        onQuickSellClick={this.handleQuickSale}/>
-    ))
-    
-    if (this.state.displayAdd){
-    } 
+    let itemList = <List  
+                      item={this.inventory}
+                      onItemClick={this.handleDisplayDetail}
+                      onQuickSellClick={this.handleQuickSale}/>
     
     if (this.state.selectedItem !== null) {
       detail = <Detail item={this.state.selectedItem}/>

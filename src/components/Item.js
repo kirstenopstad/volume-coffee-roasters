@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQuickSellClick}) => {
+  
   let stock = "";
   if (poundsInStock === 0) {
     stock = "Out of Stock";
@@ -20,7 +21,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
       price: price,
       roast: roast,
       poundsInStock: pounds,
-      id: id
+      id: id,
     }
     onQuickSellClick(updatedItem)
   }
