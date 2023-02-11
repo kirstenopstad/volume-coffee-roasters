@@ -47,7 +47,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
 
   return (
     <React.Fragment>
-      <Col>
+      <Col className="inventory-card">
         <Card style={{ width: '18rem' }}>
           <Card.Img variant="top" src={img}/>
           <Card.Body>
