@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Header';
 import InventoryControl from './InventoryControl';
@@ -7,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 function App() {
   return (
     <React.Fragment>
-      <Container fluid="true">
+      <Container>
         <div className='Site'>
           <Header />
           <InventoryControl />
