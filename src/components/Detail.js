@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
+import CloseButton from 'react-bootstrap/CloseButton';
 
-const Detail = ({ item }) => {
+const Detail = ({ item, onClose }) => {
   
   return (
     <React.Fragment>
       <div className="detail">
-        <h3>Detail</h3>
+        <div className="detail-header">
+          <h3>Detail</h3>
+          <CloseButton aria-label="Hide" onClick={onClose} />
+        </div>
 
         <Image src={item.image} fluid/>
-    
-        <h4>{item.name}</h4>
 
         <Table>
           <thead>
@@ -46,6 +48,7 @@ const Detail = ({ item }) => {
 }
 
 Detail.propTypes = {
-  item: PropTypes.object
+  item: PropTypes.object,
+  onClose: PropTypes.func
 }
 export default Detail;
