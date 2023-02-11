@@ -12,7 +12,6 @@ const Detail = ({ item }) => {
         <p>{item.blend}</p>
         <p>${item.price}</p>
         <p>{item.origin}</p>
-        <p>Units in Stock:{item.unitsInStock}</p>
         <p>Pounds in Stock: {item.poundsInStock} lbs.</p>
         <button>Update</button>
         <button>Delete</button>
