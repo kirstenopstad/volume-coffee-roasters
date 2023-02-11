@@ -44,6 +44,7 @@ class InventoryControl extends React.Component {
     const updatedInventory = this.state.inventory
                                         .filter(element => element.id !== id)
                                         .concat(item);
+    
     this.setState({inventory: updatedInventory})
   }
   
@@ -54,9 +55,15 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory})
   }
 
+  // sortInventory = () => {
+  //   this.state.inventory((a,b) => {
+  //     return a.name - b.name;
+  //   })
+  // }
   
   render() {
-    
+    // sort inventory
+
     // conditional rendering
     let detail = null;
     let addForm = null;

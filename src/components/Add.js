@@ -17,6 +17,7 @@ const Add = ({ onAddClick }) => {
       origin: event.target.origin.value,
       price: parseInt(event.target.price.value),
       roast: event.target.roast.value,
+      poundsInStock: 130,
       image: placeholderImage,
       id: v4()
     }
