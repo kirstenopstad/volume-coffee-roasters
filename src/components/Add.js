@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-
 const Add = ({ onAddClick }) => {
   const handleFormSubmission = (event) => {
     event.preventDefault();
@@ -18,11 +17,14 @@ const Add = ({ onAddClick }) => {
 
   return(
     <form onSubmit={handleFormSubmission}>
-      <h3>Add</h3>
       <input type="text" placeholder="Name" name="name"/>
+      <br/>
       <input type="text" placeholder="Origin" name="origin"/>
+      <br/>
       <input type="number" placeholder="Price" name="price"/>
+      <br/>
       <input type="text" placeholder="Roast" name="roast"/>
+      <br/>
       <button type="submit">Add</button>
     </form>
   );

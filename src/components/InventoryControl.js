@@ -51,8 +51,12 @@ class InventoryControl extends React.Component {
     
     return(
       <React.Fragment>
-        <Add onAddClick={this.handleAddItem}/>
-        {detail}
+        <div className="add-form">
+          <Add onAddClick={this.handleAddItem}/>
+        </div>
+        <div className="detail">
+          {detail}
+        </div>
         {inventoryList}
       </React.Fragment>
     );

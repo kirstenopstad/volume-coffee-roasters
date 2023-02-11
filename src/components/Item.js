@@ -26,7 +26,6 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
     onQuickSellClick(updatedItem)
   }
 
-
   return (
     <React.Fragment>
       <div onClick={() => onItemClick(id)}>
@@ -34,10 +33,10 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, onItemClick, onQu
         <p>{origin}</p>
         <p>${price}</p>
         <p>{roast}</p>
-      </div>
       <form onClick={handleSellClick}>
         <button type="submit">Sell</button>
       </form>
+      </div>
     </React.Fragment>
   )
 }
