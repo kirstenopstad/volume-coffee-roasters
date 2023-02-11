@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
+import Table from 'react-bootstrap/Table'
 
 const Detail = ({ item }) => {
   
@@ -7,15 +10,29 @@ const Detail = ({ item }) => {
     <React.Fragment>
       <div className="Detail">
         <h3>Detail</h3>
-        <img src={item.image} />
+        <Image src={item.image} fluid/>
         <h4>{item.name}</h4>
-        <p>{item.blend}</p>
-        <p>${item.price}</p>
-        <p>{item.origin}</p>
-        <p>Pounds in Stock: {item.poundsInStock} lbs.</p>
-        <button>Update</button>
-        <button>Delete</button>
-        <button>Restock</button>
+        <Table>
+          <thead>
+            <tr>
+              <th>Price</th>
+              <th>Roast</th>
+              <th>Origin</th>
+              <th>In Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${item.price}</td>
+              <td>{item.roast}</td>
+              <td>{item.origin}</td>
+              <td>{item.poundsInStock} lbs.</td>
+            </tr>
+          </tbody>
+        </Table>
+        <Button>Update</Button>
+        <Button>Delete</Button>
+        <Button>Restock</Button>
       </div>
     </React.Fragment>
   )
