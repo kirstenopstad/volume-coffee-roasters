@@ -72,7 +72,7 @@ __User stories:__
         <!-- * Edit.js – form to edit item in inventory -->
 3. ✅ Build Static Components
 4. ✅ Add State
-  * Local State to display either list, detail or add
+  * ✅ Local State to display either list, detail or add
   * ✅ Shared State to allow Create & Update Functionality
 5. Style to match [inspiration](https://www.stumptowncoffee.com/collections/coffee)
 
@@ -83,8 +83,8 @@ __User stories:__
 <!-- [Link to operational site](http://www.kirstenopstad.github.com/<REPOSITORY NAME>) -->
 
 ### Goals
-1. Meet MVP
-2. Add styling to match inspiration
+1. ✅ Meet MVP
+2. Add styling to match inspiration 
 3. Stretch: add cart feature
 
 ## Setup/Installation Requirements
@@ -99,10 +99,6 @@ $ npm install
 ```
 $ npm run start
 ```
-To run tests with Jest, run:
-```
-$ npm run test
-```
 
 ## Known Bugs
 
@@ -115,7 +111,7 @@ $ npm run test
 
 MIT License
 
-Copyright (c) 2022 Kirsten Opstad
+Copyright (c) 2023 Kirsten Opstad
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
