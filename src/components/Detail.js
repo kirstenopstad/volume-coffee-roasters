@@ -36,11 +36,9 @@ const Detail = ({ item, onClose }) => {
           </tbody>
         </Table>
 
-        <div className="detail-menu">
         <Button disabled>Update</Button>
         <Button disabled>Delete</Button>
         <Button disabled>Restock</Button>
-        </div>
         
       </div>
     </React.Fragment>

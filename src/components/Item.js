@@ -59,8 +59,8 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
             <p>{origin} ${price} {roast}</p>
             <p>{stock}</p>
           <form onSubmit={handleSellClick}>
-            <Button variant="secondary"  onClick={() => onItemClick(id)}>Details</Button>
-            <Button variant={sellButtonStatus} type="submit">{sellButtonText}</Button>
+              <Button variant="secondary"  onClick={() => onItemClick(id)}>Details</Button>
+              <Button variant={sellButtonStatus} type="submit">{sellButtonText}</Button>
           </form>
           </Card.Body>
         </Card>
