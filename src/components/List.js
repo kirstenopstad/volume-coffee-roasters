@@ -19,11 +19,10 @@ const ItemList = ({ items, onItemClick, onQuickSellClick }) => {
           id={element.id}
           key={element.id} 
           onItemClick={onItemClick}
-          onQuickSellClick={onQuickSellClick} />
+          whenSellClicked={onQuickSellClick} />
           )
         }
       </Row>
-      {/* </CardGroup> */}
     </React.Fragment>    
   );
 }
