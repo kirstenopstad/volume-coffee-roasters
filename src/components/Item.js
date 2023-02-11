@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick, onQuickSellClick}) => {
   
@@ -30,21 +31,23 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, onItemClick,
 
   return (
     <React.Fragment>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={img} onClick={() => onItemClick(id)}/>
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <p>{origin} ${price}</p>
-        <p>{roast}</p>
-      <form onClick={handleSellClick}>
-        <Button variant="secondary" type="submit">Sell</Button>
-      </form>
-      </Card.Body>
-    </Card>
+      <Col>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img} onClick={() => onItemClick(id)}/>
+          <Card.Body>
+            <Card.Title>{name}</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <p>{origin} ${price}</p>
+            <p>{roast}</p>
+          <form onClick={handleSellClick}>
+            <Button variant="secondary" type="submit">Sell</Button>
+          </form>
+          </Card.Body>
+        </Card>
+      </Col>
     </React.Fragment>
   )
 }
