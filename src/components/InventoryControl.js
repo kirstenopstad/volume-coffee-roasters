@@ -3,6 +3,7 @@ import inventorySeedData from "./InventorySeedData";
 import List from  './List';
 import Detail from './Detail';
 import Add from './Add';
+import Button from 'react-bootstrap/Button'
 
 class InventoryControl extends React.Component {
 
@@ -11,6 +12,7 @@ class InventoryControl extends React.Component {
     this.state = {
       inventory: [...inventorySeedData],
       selectedItem: null,
+      showAddForm: false,
     }
   }
 
@@ -18,10 +20,23 @@ class InventoryControl extends React.Component {
     const detailItem = this.state.inventory.filter(element => element.id === id)[0];
     this.setState({selectedItem: detailItem})
   }
+
+  handleCloseDetail = () => {
+    this.setState({selectedItem: null})
+  }
   
+  handleAddClick = () => {
+    this.setState(prevState => ({showAddForm: !prevState.showAddForm,}));
+  }
+
+  // this.setState(prevState => ({
+  //   // effectively sets bool formVisible to its opposite – a toggler!
+  //   formVisibleOnPage: !prevState.formVisibleOnPage,
+  // }));
+
   handleAddItem = (item) => {
     const updatedInventory = this.state.inventory.concat(item);
-    this.setState({inventory: updatedInventory})
+    this.setState({inventory: updatedInventory, showAddForm: false})
   }
   
   handleUpdateItem = (item) => {
@@ -44,19 +59,35 @@ class InventoryControl extends React.Component {
     
     // conditional rendering
     let detail = null;
+    let addForm = null;
+    let addButtonText = null;
     let inventoryList = <List  
-                          items={this.state.inventory}
-                          onItemClick={this.handleDisplayDetail}
-                          onQuickSellClick={this.handleQuickSale}/>
+    items={this.state.inventory}
+    onItemClick={this.handleDisplayDetail}
+    onQuickSellClick={this.handleQuickSale}/>
+    
     
     if (this.state.selectedItem !== null) {
-      detail = <Detail item={this.state.selectedItem}/>
+      detail = <Detail item={this.state.selectedItem} onClose={this.handleCloseDetail}/>
+      inventoryList = null;
     }
     
+    if (this.state.showAddForm === true) {
+      addForm = <Add onAddClick={this.handleAddItem}/>;
+      inventoryList = null;
+      detail = null;
+      addButtonText = "Return to Inventory";
+    } else {
+      addButtonText = "Add Roast";
+    }
+    // multipurpose button
+    let mpButton = <Button onClick={this.handleAddClick}>{addButtonText}</Button>;
+
     return(
       <React.Fragment>
         <div className="add-form">
-          <Add onAddClick={this.handleAddItem}/>
+          {mpButton}
+          {addForm}
         </div>
         <div className="detail">
           {detail}
