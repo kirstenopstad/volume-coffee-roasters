@@ -4,6 +4,8 @@
 
 #### A web app that tracks inventory for a fictional coffee shop
 
+#### [Check out the live site](https://kirstenopstad.github.io/local-business/)!
+
 ## Technologies Used
 
 * React
