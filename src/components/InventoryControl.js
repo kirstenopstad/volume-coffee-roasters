@@ -39,12 +39,13 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory, showAddForm: false})
   }
   
-  handleUpdateItem = (item) => {
-    const id = item.id;
-    const updatedInventory = this.state.inventory
-                                        .filter(element => element.id !== id)
-                                        .concat(item);
-    this.sortInventory(updatedInventory);
+  handleUpdateItem = (updatedItem) => {
+    // structured like handleQuickSale
+    const itemToReplace = this.state.inventory
+                              .filter(i => i.id === updatedItem.id)[0]
+    const insertionPoint = this.state.inventory.indexOf(itemToReplace)
+    const updatedInventory = [...this.state.inventory]
+    updatedInventory[insertionPoint] = updatedItem;
     this.setState({inventory: updatedInventory});
   }
   
@@ -60,14 +61,6 @@ class InventoryControl extends React.Component {
     this.setState({inventory: updatedInventory})
   }
 
-  // sortInventory = () => {
-  //   let sortedInventory = [...this.state.inventory]
-  //   sortedInventory.sort((a,b) => {
-  //     return a.name - b.name;
-  //   })
-  //   this.setState({inventory: sortedInventory})
-  // }
-  
   render() {
 
     // conditional rendering
@@ -77,7 +70,7 @@ class InventoryControl extends React.Component {
     let inventoryList = <List  
     items={this.state.inventory}
     onItemClick={this.handleDisplayDetail}
-    onQuickSellClick={this.handleQuickSale}/>
+    onQuickSellClick={this.handleUpdateItem}/>
     
     
     if (this.state.selectedItem !== null) {

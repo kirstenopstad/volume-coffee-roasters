@@ -37,6 +37,7 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, summary, onI
       origin: origin,
       price: price,
       roast: roast,
+      summary: summary,
       poundsInStock: pounds,
       image: img,
       key: id,
