@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import CloseButton from 'react-bootstrap/CloseButton';
 
-const Detail = ({ item, onClose }) => {
+const Detail = ({ item, onClose, onUpdateClick }) => {
   
   return (
     <React.Fragment>
@@ -36,7 +36,7 @@ const Detail = ({ item, onClose }) => {
           </tbody>
         </Table>
         <p>{item.summary}</p>
-        {/* <Button disabled>Update</Button> */}
+        <Button onClick={onUpdateClick}>Update</Button>
         {/* <Button disabled>Delete</Button> */}
         {/* <Button disabled>Restock</Button> */}
         
@@ -47,6 +47,7 @@ const Detail = ({ item, onClose }) => {
 
 Detail.propTypes = {
   item: PropTypes.object,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  onUpdateClick: PropTypes.func
 }
 export default Detail;

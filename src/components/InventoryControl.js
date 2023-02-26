@@ -3,6 +3,7 @@ import inventorySeedData from "./InventorySeedData";
 import List from  './List';
 import Detail from './Detail';
 import Add from './Add';
+import Update from './Update';
 import Button from 'react-bootstrap/Button'
 
 class InventoryControl extends React.Component {
@@ -13,6 +14,7 @@ class InventoryControl extends React.Component {
       inventory: [...inventorySeedData],
       selectedItem: null,
       showAddForm: false,
+      showUpdateForm: false,
     }
   }
 
@@ -27,6 +29,10 @@ class InventoryControl extends React.Component {
   
   handleAddClick = () => {
     this.setState(prevState => ({showAddForm: !prevState.showAddForm,}));
+  }
+  
+  handleUpdateClick = () => {
+    this.setState(prevState => ({showUpdateForm: !prevState.showUpdateForm,}));
   }
 
   // this.setState(prevState => ({
@@ -47,35 +53,37 @@ class InventoryControl extends React.Component {
     const updatedInventory = [...this.state.inventory]
     updatedInventory[insertionPoint] = updatedItem;
     this.setState({inventory: updatedInventory});
+    // show detail on update
+    if (this.state.selectedItem != null) {
+      this.setState({selectedItem: updatedItem})
+    }
   }
   
-  handleQuickSale = (updatedItem) => {
-    // find index of updatedItem
-    const itemToReplace = this.state.inventory.filter(e => e.id === updatedItem.id)[0];
-    const insertionPoint = this.state.inventory.indexOf(itemToReplace);
-    // make copy of inventory
-    const updatedInventory = [...this.state.inventory]
-    // replace item at index in inventory
-    updatedInventory[insertionPoint] = updatedItem;
-    // replace inventory in state
-    this.setState({inventory: updatedInventory})
-  }
-
   render() {
 
     // conditional rendering
     let detail = null;
     let addForm = null;
+    // let updateForm = null;
     let addButtonText = null;
     let inventoryList = <List  
     items={this.state.inventory}
     onItemClick={this.handleDisplayDetail}
     onQuickSellClick={this.handleUpdateItem}/>
     
-    
     if (this.state.selectedItem !== null) {
-      detail = <Detail item={this.state.selectedItem} onClose={this.handleCloseDetail}/>
       inventoryList = null;
+      if (this.state.showUpdateForm === true) {
+        detail = <Update 
+                    item={this.state.selectedItem} 
+                    toggleShowUpdateForm={this.handleUpdateClick}
+                    onUpdateSubmit={this.handleUpdateItem} />
+      } else {
+        detail = <Detail 
+                    item={this.state.selectedItem} 
+                    onUpdateClick={this.handleUpdateClick}
+                    onClose={this.handleCloseDetail}/>
+      }
     }
     
     if (this.state.showAddForm === true) {
