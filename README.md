@@ -23,7 +23,10 @@ Volume Coffee Roasters is a fictional coffee roastery web app that includes a FO
 * CSS
 * webpack
 * Node.js
+* EmailJS
+
 ***
+
 ### Objectives (MVP)
 
 At Volume Coffee Roasters, we use the FOH part of our web app to sell coffee beans and subscriptions to customers & the BOH to track inventory. We get our coffee delivered in large burlap sacks. Here are the details:
@@ -39,7 +42,7 @@ __User Storeis:__
 
 __FOH User Stories:__
 * As a FOH user, I want to first see a Landing page (area) that includes a bold, call-to-action to allow customers to subscribe to our mailing list in two clicks.
-* As a FOH user, I want to be able to contact the company directly from the footer & see company contact info
+* ✅ As a FOH user, I want to be able to contact the company directly from the footer & see company contact info
 
 __BOH User Stories:__
 * ✅ As a BOH user, I want to see a list/menu of all available types of coffee beans.

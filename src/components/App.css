@@ -3,6 +3,33 @@
   src: url(./../fonts/WindsorRegular.ttf);
 }
 
+/* anchors */
+a, .footer a {
+  color: white;
+  font-weight: 500;
+}
+
+/* unvisited link */
+a:link, .footer a:link {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited, .footer a:visited {
+  color: lightgray;
+}
+
+/* mouse over link */
+a:hover, .footer a:hover {
+  font-weight: 500;
+}
+
+/* selected link */
+a:active, .footer a:active {
+  font-weight: lightgray;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   /* font-family: 'Windsor Regular'; */
@@ -13,7 +40,24 @@ p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Hero styling */
+/* Header Nav */
+
+.header {
+  background-color: #272727;
+}
+.navigation {
+  background-color: #272727;
+}
+
+.navigation button {
+  margin-right: 5px;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+/* Hero */
 
 .hero h1 {
   font-size: xx-large;
@@ -41,10 +85,30 @@ p {
   font-weight: 600
 }
 
-.logo {
-  max-width: 150px;
+/* Footer Styling */
+.footer {
+  background-color: #272727;
+  color: lightgray;
+  padding: 15px;
 }
 
+.toggle {
+  text-align: center;  
+  padding-top: 5px;
+}
+
+.contact-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev-branding {
+  text-align: center;  
+  padding-top: 5px;
+}
 
 .sub-heading {
   display: block;
@@ -55,17 +119,6 @@ p {
   background-color: #F6F5F4;
 }
 
-.header {
-  background-color: #272727;
-}
-.navigation {
-  background-color: #272727;
-
-}
-
-.navigation button {
-  margin-right: 5px;
-}
 
 .detail {
   max-width: 500px;
@@ -100,7 +153,6 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  align-items: center;
 }
 
 .inventory-card {
