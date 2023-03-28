@@ -41,6 +41,35 @@ p {
   font-weight: 600
 }
 
+/* Footer Styling */
+.footer {
+  background-color: #272727;
+  color: lightgray;
+  padding: 15px 0 5px 0;
+}
+
+/* .footer-content {
+
+} */
+
+.toggle {
+  text-align: center;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toggle button {
+  max-width: 150px;
+}
+
+.contact-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo {
   max-width: 150px;
 }
