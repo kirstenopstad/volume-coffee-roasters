@@ -8,9 +8,9 @@ import Container from 'react-bootstrap/Container';
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <Container>
         <div className='Site'>
-          <Header />
           <InventoryControl />
         </div>
       </Container>
