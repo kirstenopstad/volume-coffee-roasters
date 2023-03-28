@@ -5,9 +5,40 @@ import Card from 'react-bootstrap/Card';
 import beans from './../img/stock/beans.jpg'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Modal from 'react-bootstrap/Modal';
 import logo from './../img/logo.png'
+import subGif from './../img/stock/coffee-coffee-time.gif'
+
+const SubscribeModal = (props) => {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <h4>Subscriptions</h4>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="sub-modal">
+        {/* <h4>Centered Modal</h4> */}
+        <img src={subGif} alt="playful gif for Volume Coffee Roasters subscribers"></img>
+        <p>Thanks for clicking subscribe!</p>
+        <p>We're not taking orders just yet, check back soon!</p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="outline-dark" onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 const Header = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+  
+
   return(
       <div className="header">
         <Navbar collapseOnSelect expand="md" variant="dark" className="navigation" >
@@ -45,7 +76,16 @@ const Header = () => {
           <Card.Text>
             plus get 30% of your first order with code NEWBFF
           </Card.Text>
-          <Button variant="outline-light">Subscribe</Button>
+          {/* <Button variant="outline-light">Subscribe</Button> */}
+          <Button variant="outline-light" onClick={() => setModalShow(true)}>
+            Subscribe
+          </Button>
+
+      <SubscribeModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
         </Card.ImgOverlay>
       </Card>
     </div>
