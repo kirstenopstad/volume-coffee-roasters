@@ -3,28 +3,37 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import beans from './../img/stock/beans.jpg'
-
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import logo from './../img/logo.png'
 
 const Header = () => {
   return(
-    <React.Fragment>
       <div className="header">
-        <h1>Stumptown <span className="sub-heading">Coffee Roasters</span></h1>
-        <Nav className="navigation">
-          <Nav.Item>
-            <Nav.Link href="#">Coffee</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Coldbrew</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Gear</Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <Navbar collapseOnSelect expand="md" variant="dark" className="navigation" >
+          <Container >
+            <Navbar.Brand href="#index">
+              <img src={logo} alt="Volume Coffee Roasters logo" className="logo"/>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#blog">Blog</Nav.Link>
+                <Nav.Link href="#Order">Order</Nav.Link>
+                <Nav.Link href="#Contact">Contact</Nav.Link>
         
+              </Nav>
+              <Nav>
+                <Nav.Link eventKey={2} href="#memes">
+                  <Button variant="outline-light">Know Your Strength</Button>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
         <Card className="bg-dark text-white hero">
         <div className="hero-mask">
-        <Card.Img src={beans} alt="roasted coffee beans"/>
+          <Card.Img src={beans} alt="roasted coffee beans"/>
         </div>
         <Card.ImgOverlay className="hero-content">
           <Card.Title>
@@ -36,12 +45,10 @@ const Header = () => {
           <Card.Text>
             plus get 30% of your first order with code NEWBFF
           </Card.Text>
-          {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
           <Button variant="outline-light">Subscribe</Button>
         </Card.ImgOverlay>
       </Card>
-      </div>
-  </React.Fragment>
+    </div>
   );
 };
 
