@@ -11,8 +11,6 @@ const Footer = () => {
   const [checked, setChecked] = useState(false);
   return (
     <div className="footer">
-      {/* <Container className="footer-content"> */}
-      <Container>
         <Row xs={1} md={3}>
           <Col className="contact-form">
             <Form>
@@ -45,7 +43,7 @@ const Footer = () => {
             </ToggleButton>
           </ButtonGroup>
  
-            <p>Built By KO</p>
+            <a href="https://built-by-ko.web.app/">Built By KO</a>
           </Col>
           <Col className="contact-info">
             <p>
@@ -57,8 +55,7 @@ const Footer = () => {
             </p>
           </Col>
         </Row>
-          
-      </Container>
+
     </div>
   )
 }
