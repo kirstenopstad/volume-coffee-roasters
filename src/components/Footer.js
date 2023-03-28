@@ -1,11 +1,9 @@
-import React,{useState} from "react";
-import Container from 'react-bootstrap/Container';
+import React, {useState} from "react";
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import logo from './../img/logo.png'
 
 const Footer = () => {
   const [checked, setChecked] = useState(false);
@@ -30,29 +28,32 @@ const Footer = () => {
               </Form>
           </Col>
           <Col className="toggle">
-          <ButtonGroup className="mb-2">
-            <ToggleButton
-              id="toggle-check"
-              type="checkbox"
-              variant="outline-light"
-              checked={checked}
-              value="1"
-              onChange={(e) => setChecked(e.currentTarget.checked)}
-            >
-              Show Back of House
-            </ToggleButton>
-          </ButtonGroup>
- 
-            <a href="https://built-by-ko.web.app/">Built By KO</a>
+            <Form.Group>
+              <Form.Check
+                type="switch"
+                id="toggle-check"
+                title="FOH | BOH"
+                onChange={(e) => setChecked(e.currentTarget.checked)}
+              />
+              <Form.Label>FOH {`<`}{`>`} BOH</Form.Label>
+            </Form.Group>
+            
+            <br/>
           </Col>
           <Col className="contact-info">
+            <img src={logo} className="logo" alt="Volume Coffee Roasters logo"></img>
             <p>
-              Volume Roasters 
+              Volume Coffee Roasters 
               <br/>
               123 Industrial Way
               <br/>
               Scranton, PA 12345
             </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="dev-branding">
+            <a href="https://built-by-ko.web.app/">Built By KO</a>
           </Col>
         </Row>
 

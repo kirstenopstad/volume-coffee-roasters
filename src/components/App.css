@@ -94,19 +94,21 @@ p {
 
 .toggle {
   text-align: center;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-top: 5px;
 }
 
 .contact-info {
-  text-align: right;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
+.dev-branding {
+  text-align: center;  
+  padding-top: 5px;
+}
 
 .sub-heading {
   display: block;
@@ -151,7 +153,6 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  align-items: center;
 }
 
 .inventory-card {
