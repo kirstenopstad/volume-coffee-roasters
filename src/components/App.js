@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import InventoryControl from './InventoryControl';
 import Container from 'react-bootstrap/Container';
+import FeaturedProduct from './FeaturedProduct';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Container>
         <div className='Site'>
+          <FeaturedProduct />
           <InventoryControl />
         </div>
       </Container>
