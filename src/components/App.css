@@ -4,9 +4,43 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Windsor Regular';
-  text-transform: uppercase;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-family: 'Windsor Regular'; */
+  /* text-transform: uppercase; */
 }
+
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Hero styling */
+
+.hero h1 {
+  font-size: xx-large;
+  font-weight: 900
+  ;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mask {
+  opacity: 0.6;
+}
+
+.hero p {
+  font-size: small;  
+}
+
+.hero span {
+  font-size: .7em;
+  font-weight: 600
+}
+
 
 .sub-heading {
   display: block;
