@@ -3,24 +3,37 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import beans from './../img/stock/beans.jpg'
-
+import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import logo from './../img/logo.png'
 
 const Header = () => {
   return(
     <React.Fragment>
       <div className="header">
-        <h1>Stumptown <span className="sub-heading">Coffee Roasters</span></h1>
-        <Nav className="navigation">
-          <Nav.Item>
-            <Nav.Link href="#">Coffee</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Coldbrew</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#">Gear</Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <Navbar collapseOnSelect expand="md" variant="dark" className="navigation" >
+          <Container >
+            <Navbar.Brand href="#home">
+              <img src={logo} alt="Volume Coffee Roasters logo" className="logo"/>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#features">Blog</Nav.Link>
+                <Nav.Link href="#pricing">Order</Nav.Link>
+                <Nav.Link href="#pricing">Contact</Nav.Link>
+        
+              </Nav>
+              <Nav>
+                <Nav.Link eventKey={2} href="#memes">
+                  <Button variant="outline-light">Know Your Strength</Button>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        
         
         <Card className="bg-dark text-white hero">
         <div className="hero-mask">
