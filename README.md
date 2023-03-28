@@ -72,12 +72,15 @@ __BOH User Stories (Stretch):__
 ***
 ## Process 
 
+### Roadmap
+![Roadmap](./src/img/roadmap.png)
 ### Component Drawing
 [![Component Drawing](./src/img/component_diagram.png)](https://www.figma.com/file/9yZdrlZDInV6346toTdG2Z/CoffeeShop?node-id=0%3A1&t=SaS3WUYroyADmYHv-1)
 ### Mockup (FOH)
 ![Mockup Front of House](./src/img/mockup-foh.png)
 ### Mockup (BOH)
 ![Mockup Back of House](./src/img/mockup-boh.png)
+
 
 ***
 ## Implementation
