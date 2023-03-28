@@ -1,3 +1,4 @@
+/*  Site styling */
 @font-face {
   font-family: Windsor Regular;
   src: url(./../fonts/WindsorRegular.ttf);
@@ -38,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Site {
+  background-color: #F6F5F4;
 }
 
 /* Header Nav */
@@ -110,15 +115,28 @@ p {
   padding-top: 5px;
 }
 
+/* Subscription Modal */
+.sub-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-modal img {
+  max-width: 200px;
+}
+
+.sub-modal p {
+  padding-top: 15px;
+  text-align: center;
+}
+
+/* Inventory */
 .sub-heading {
   display: block;
   font-size: large;
 }
-
-.Site {
-  background-color: #F6F5F4;
-}
-
 
 .detail {
   max-width: 500px;
@@ -162,4 +180,16 @@ p {
 
 .inventory-card button {
   margin-right: 5px;
+}
+
+/* Featured  */
+.featured-img {
+  max-width: 350px;
+}
+
+.featured-product {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-top: 10px
 }
