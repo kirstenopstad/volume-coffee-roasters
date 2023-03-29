@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
@@ -8,16 +8,35 @@ import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
 
 function App() {
+  const [showBOH, setShowBOH] = useState(false);
+
+  const toggleBOH = (showStatus) => {
+    if (showStatus) {
+      setShowBOH(false)
+    } else {
+      setShowBOH(true)
+    }
+  }
+
+  // conditional rendering
+  let main = null;
+  if (!showBOH) {
+    // show FOH
+    main = <FeaturedProduct />
+  } else {
+    // show BOH
+    main = <InventoryControl />
+  }
+
   return (
     <React.Fragment>
       <Header />
       <Container>
         <div className='Site'>
-          <FeaturedProduct />
-          <InventoryControl />
+          {main}
         </div>
       </Container>
-      <Footer />
+      <Footer toggleBOH={toggleBOH} />
     </React.Fragment>
   );
 }

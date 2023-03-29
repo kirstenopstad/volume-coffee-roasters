@@ -1,4 +1,5 @@
 import React, { useState, useRef} from "react";
+import PropTypes from 'prop-types'
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,11 +7,16 @@ import Button from 'react-bootstrap/Button';
 import logo from './../img/logo.png'
 import emailjs from '@emailjs/browser';
 
-const Footer = () => {
-  const [checked, setChecked] = useState(false);
+const Footer = ({toggleBOH}) => {
+  const [bohChecked, setBohChecked] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [emailResult, setEmailResult] = useState(false);
 
+  const handleToggle =  () => {
+    const status = bohChecked ? false : true;
+    setBohChecked(status)
+    toggleBOH(bohChecked)
+  }
 
   const form = useRef();
   
@@ -37,6 +43,7 @@ const Footer = () => {
   if (emailError) {
     emailNotification = emailError 
   }
+
   return (
     <div className="footer">
         <Row xs={1} md={3}>
@@ -64,7 +71,7 @@ const Footer = () => {
                 type="switch"
                 id="toggle-check"
                 title="FOH | BOH"
-                onChange={(e) => setChecked(e.currentTarget.checked)}
+                onChange={handleToggle}
               />
               <Form.Label>FOH {`<`}{`>`} BOH</Form.Label>
             </Form.Group>
@@ -90,6 +97,10 @@ const Footer = () => {
 
     </div>
   )
+}
+
+Footer.propTypes = {
+  toggleBOH: PropTypes.func
 }
 
 export default Footer;
