@@ -22,10 +22,14 @@ function App() {
   let main = null;
   if (!showBOH) {
     // show FOH
-    main = <FeaturedProduct />
+    main = 
+    <>
+    <FeaturedProduct />
+    <InventoryControl showBOH={showBOH}/>
+    </>
   } else {
     // show BOH
-    main = <InventoryControl />
+    main = <InventoryControl showBOH={showBOH}/>
   }
 
   return (

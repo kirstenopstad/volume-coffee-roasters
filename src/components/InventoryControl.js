@@ -1,6 +1,7 @@
 import React from "react";
 import inventorySeedData from "./InventorySeedData";
 import List from  './List';
+import FOHList from  './FOHList';
 import Detail from './Detail';
 import Add from './Add';
 import Update from './Update';
@@ -60,16 +61,23 @@ class InventoryControl extends React.Component {
   }
   
   render() {
-
     // conditional rendering
     let detail = null;
     let addForm = null;
     // let updateForm = null;
     let addButtonText = null;
-    let inventoryList = <List  
+    let inventoryList = <FOHList  
     items={this.state.inventory}
     onItemClick={this.handleDisplayDetail}
     onQuickSellClick={this.handleUpdateItem}/>
+    
+    // 
+    if (this.props.showBOH) {
+      inventoryList = <List  
+      items={this.state.inventory}
+      onItemClick={this.handleDisplayDetail}
+      onQuickSellClick={this.handleUpdateItem}/>
+    }
     
     if (this.state.selectedItem !== null) {
       inventoryList = null;
@@ -94,8 +102,13 @@ class InventoryControl extends React.Component {
     } else {
       addButtonText = "Add Roast";
     }
+    
     // multipurpose button
     let mpButton = <Button onClick={this.handleAddClick}>{addButtonText}</Button>;
+    // only show button in BOH
+    if (!this.props.showBOH) {
+      mpButton = null;
+    }
 
     return(
       <React.Fragment>
