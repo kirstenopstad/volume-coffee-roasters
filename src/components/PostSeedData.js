@@ -7,6 +7,7 @@ const PostSeedData = [
   tagline: "AMA with our Fair Trade Certified growers",
   image: farmer,
   caption: "Fair Trade Certified coffee grower in the field.",
+  content: "Our interview was delayed!",
   photoCredit: "Esteban Benites",
   featured: true,
   featureOrder: 1,
