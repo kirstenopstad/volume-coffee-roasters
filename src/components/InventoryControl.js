@@ -28,6 +28,10 @@ class InventoryControl extends React.Component {
     this.setState({selectedItem: null})
   }
   
+  handleCloseUpdate = () => {
+    this.setState({showUpdateForm: false})
+  }
+  
   handleAddClick = () => {
     this.setState(prevState => ({showAddForm: !prevState.showAddForm,}));
   }
@@ -85,6 +89,7 @@ class InventoryControl extends React.Component {
         detail = <Update 
                     item={this.state.selectedItem} 
                     toggleShowUpdateForm={this.handleUpdateClick}
+                    onClose={this.handleCloseUpdate}
                     onUpdateSubmit={this.handleUpdateItem} />
       } else {
         detail = <Detail 

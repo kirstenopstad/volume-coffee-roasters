@@ -8,7 +8,7 @@ import CloseButton from 'react-bootstrap/CloseButton';
 const Detail = ({ item, onClose, onUpdateClick, showBOH }) => {
   
   // conditional rendering to only show update button in BOH
-  let updateButton = <Button onClick={onUpdateClick}>Update</Button>;
+  let updateButton = <Button onClick={onUpdateClick} variant="outline-dark">Update</Button>;
   if (!showBOH) {
     updateButton = null;
   }
