@@ -5,6 +5,16 @@ import Col from 'react-bootstrap/Col';
 
 const Cart = ({cart}) => {
 
+  // calculate subtotal
+  const subTotal = () => {
+    let sub = 0;
+    cart.forEach((item) => {
+      sub = sub + item.price;
+      console.log(sub)
+    })
+    return sub
+  }
+
   let cartContent = null;
   if (cart.length > 0) {
     cartContent =
@@ -19,10 +29,15 @@ const Cart = ({cart}) => {
           <p>{item.name}</p>
         </Col>
         <Col>
-          <p>{item.price}</p>
+          <p>${item.price}</p>
         </Col>
       </Row>
       )}
+      <Row>
+        <Col>
+        Total: ${subTotal()}
+        </Col>
+      </Row>
     </Container>
   }
   return(
