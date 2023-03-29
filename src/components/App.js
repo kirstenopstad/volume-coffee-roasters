@@ -7,9 +7,11 @@ import InventoryControl from './InventoryControl';
 import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
 import FeaturedPosts from './FeaturedPosts';
+import Cart from './Cart';
 
 function App() {
   const [showBOH, setShowBOH] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const toggleBOH = (showStatus) => {
     if (showStatus) {
@@ -17,6 +19,11 @@ function App() {
     } else {
       setShowBOH(true)
     }
+  }
+
+  const handleAddToCart = (item) => {
+    let updatedCart = [...cart, item];
+    setCart(updatedCart)
   }
 
   // conditional rendering
@@ -27,7 +34,8 @@ function App() {
     <>
     <FeaturedProduct />
     <FeaturedPosts />
-    <InventoryControl showBOH={showBOH}/>
+    <InventoryControl showBOH={showBOH} handleAddToCart={handleAddToCart}/>
+    <Cart cart={cart}/>
     </>
   } else {
     // show BOH

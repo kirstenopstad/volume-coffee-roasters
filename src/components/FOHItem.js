@@ -6,8 +6,14 @@ import Col from 'react-bootstrap/Col';
 import addIcon from  './../img/icons/plus-lg.svg'
 
 
-const FOHItem = ({ name, origin, price, roast, id, img, onItemClick}) => {
+const FOHItem = ({ item, onItemClick, onAddToCart}) => {
 
+  const {name, origin, price, roast, id, img} = item;
+
+  const handleAddItem = (e) => {
+    e.preventDefault();
+    onAddToCart(item);
+  }  
   return (
     // TODO: make title anchor tag, not div-click
     <React.Fragment>
@@ -22,10 +28,10 @@ const FOHItem = ({ name, origin, price, roast, id, img, onItemClick}) => {
               <h4>{name}</h4>
               {` `}${price}
             </Card.Title>
-          <form>
+          <form onSubmit={handleAddItem}>
             <div id="cart-add">
               <p>Add to Cart</p>
-              <Button variant="outline-none" type="submit">
+              <Button variant="outline-none" type="submit" >
                 <img src={addIcon} alt="add item to cart" />
               </Button>
             </div>
@@ -47,6 +53,6 @@ FOHItem.propTypes = {
   summary: PropTypes.string,
   id: PropTypes.string,
   onItemClick: PropTypes.func,
-  whenSellClicked: PropTypes.func
+  onAddToCart: PropTypes.func,
 }
 export default FOHItem;

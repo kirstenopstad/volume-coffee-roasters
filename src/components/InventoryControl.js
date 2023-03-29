@@ -19,6 +19,8 @@ class InventoryControl extends React.Component {
     }
   }
 
+  // this.props.handleAddToCart(item)
+
   handleDisplayDetail = (id) => {
     const detailItem = this.state.inventory.filter(element => element.id === id)[0];
     this.setState({selectedItem: detailItem})
@@ -73,7 +75,7 @@ class InventoryControl extends React.Component {
     let inventoryList = <FOHList  
     items={this.state.inventory}
     onItemClick={this.handleDisplayDetail}
-    onQuickSellClick={this.handleUpdateItem}/>
+    handleAddToCart={this.props.handleAddToCart}/>
     
     // 
     if (this.props.showBOH) {
