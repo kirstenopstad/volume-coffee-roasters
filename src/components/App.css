@@ -272,7 +272,7 @@ p {
 .cart {
   position: fixed;
   height: fit-content;
-  top: 100px;
+  top: 110px;
   right: 10px;
 }
 
@@ -299,4 +299,5 @@ p {
   border-style: solid;
   height: 80px;
   width: 80px;
+  opacity: .9;
 }
