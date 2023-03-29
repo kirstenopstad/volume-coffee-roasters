@@ -8,6 +8,8 @@ import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
 import FeaturedPosts from './FeaturedPosts';
 import Cart from './Cart';
+import cartIcon from './../img/icons/cart.svg'
+
 
 function App() {
   const [showBOH, setShowBOH] = useState(false);
@@ -28,6 +30,7 @@ function App() {
 
   // conditional rendering
   let main = null;
+  // show FOH or BOH components based on toggle
   if (!showBOH) {
     // show FOH
     main = 
@@ -35,7 +38,6 @@ function App() {
     <FeaturedProduct />
     <FeaturedPosts />
     <InventoryControl showBOH={showBOH} handleAddToCart={handleAddToCart}/>
-    <Cart cart={cart}/>
     </>
   } else {
     // show BOH
@@ -45,6 +47,11 @@ function App() {
     <InventoryControl showBOH={showBOH}/>
     </>
   }
+  // if anything in cart, show cart icon
+  let showCart = null;
+  if (cart.length > 0) {
+    showCart = <Cart cart={cart}/>
+  }
 
   return (
     <React.Fragment>
@@ -52,6 +59,7 @@ function App() {
       <Container>
         <div className='Site'>
           {main}
+          {showCart}
         </div>
       </Container>
       <Footer toggleBOH={toggleBOH} />
