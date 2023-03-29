@@ -90,7 +90,8 @@ class InventoryControl extends React.Component {
         detail = <Detail 
                     item={this.state.selectedItem} 
                     onUpdateClick={this.handleUpdateClick}
-                    onClose={this.handleCloseDetail}/>
+                    onClose={this.handleCloseDetail}
+                    showBOH={this.props.showBOH}/>
       }
     }
     

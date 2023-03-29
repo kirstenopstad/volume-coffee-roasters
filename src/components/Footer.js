@@ -73,7 +73,7 @@ const Footer = ({toggleBOH}) => {
                 title="FOH | BOH"
                 onChange={handleToggle}
               />
-              <Form.Label>FOH {`<`}{`>`} BOH</Form.Label>
+              <Form.Label>FOH | BOH</Form.Label>
             </Form.Group>
             
             <br/>

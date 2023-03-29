@@ -188,10 +188,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 10px;
 }
 
+.add-form button {
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
 
 .inventory-card {
   display: flex;

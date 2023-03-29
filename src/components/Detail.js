@@ -5,8 +5,14 @@ import Button from 'react-bootstrap/Button'
 import Table from 'react-bootstrap/Table'
 import CloseButton from 'react-bootstrap/CloseButton';
 
-const Detail = ({ item, onClose, onUpdateClick }) => {
+const Detail = ({ item, onClose, onUpdateClick, showBOH }) => {
   
+  // conditional rendering to only show update button in BOH
+  let updateButton = <Button onClick={onUpdateClick}>Update</Button>;
+  if (!showBOH) {
+    updateButton = null;
+  }
+
   return (
     <React.Fragment>
       <div className="detail">
@@ -36,7 +42,7 @@ const Detail = ({ item, onClose, onUpdateClick }) => {
           </tbody>
         </Table>
         <p>{item.summary}</p>
-        <Button onClick={onUpdateClick}>Update</Button>
+        {updateButton}
         {/* <Button disabled>Delete</Button> */}
         {/* <Button disabled>Restock</Button> */}
         
