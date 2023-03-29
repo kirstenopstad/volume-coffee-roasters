@@ -1,8 +1,6 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import beans from './../img/stock/beans.jpg'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
@@ -23,7 +21,6 @@ const SubscribeModal = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="sub-modal">
-        {/* <h4>Centered Modal</h4> */}
         <img src={subGif} alt="playful gif for Volume Coffee Roasters subscribers"></img>
         <p>Thanks for clicking subscribe!</p>
         <p>We're not taking orders just yet, check back soon!</p>
@@ -38,7 +35,6 @@ const SubscribeModal = (props) => {
 const Header = () => {
   const [modalShow, setModalShow] = React.useState(false);
   
-
   return(
       <div className="header">
         <Navbar collapseOnSelect expand="md" variant="dark" className="navigation" >
@@ -62,32 +58,22 @@ const Header = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <Card className="bg-dark text-white hero">
+        <div className="text-white hero">
         <div className="hero-mask">
-          <Card.Img src={beans} alt="roasted coffee beans"/>
-        </div>
-        <Card.ImgOverlay className="hero-content">
-          <Card.Title>
             <h1>Free shipping 
               <br/>
               <span>on all subscriptions</span>
+              <p>plus get 30% of your first order with code NEWBFF</p>
             </h1>
-          </Card.Title>
-          <Card.Text>
-            plus get 30% of your first order with code NEWBFF
-          </Card.Text>
-          {/* <Button variant="outline-light">Subscribe</Button> */}
           <Button variant="outline-light" onClick={() => setModalShow(true)}>
             Subscribe
           </Button>
-
+          </div>
+        </div>
       <SubscribeModal
         show={modalShow}
         onHide={() => setModalShow(false)}
-      />
-
-        </Card.ImgOverlay>
-      </Card>
+        />
     </div>
   );
 };

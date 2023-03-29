@@ -49,6 +49,7 @@ p {
 
 .header {
   background-color: #272727;
+  overflow: hidden;
 }
 .navigation {
   background-color: #272727;
@@ -64,31 +65,45 @@ p {
 
 /* Hero */
 
+.hero div {
+  width: 100v;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-mask {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.hero h1, span, p {
+  text-align: center;
+}
+
 .hero h1 {
   font-size: xx-large;
   font-weight: 900
   ;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-mask {
-  opacity: 0.6;
+.hero span {
+  font-size: x-large;
+  font-weight: 600
 }
 
 .hero p {
   font-size: small;  
+  font-weight: 400
 }
 
-.hero span {
-  font-size: .7em;
-  font-weight: 600
-}
 
 /* Footer Styling */
 .footer {
