@@ -6,6 +6,7 @@ import Footer from './Footer';
 import InventoryControl from './InventoryControl';
 import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
+import FeaturedPosts from './FeaturedPosts';
 
 function App() {
   const [showBOH, setShowBOH] = useState(false);
@@ -25,6 +26,7 @@ function App() {
     main = 
     <>
     <FeaturedProduct />
+    <FeaturedPosts />
     <InventoryControl showBOH={showBOH}/>
     </>
   } else {

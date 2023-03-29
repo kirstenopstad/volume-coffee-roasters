@@ -233,8 +233,30 @@ p {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  padding-top: 10px
+  padding-top: 15px
 }
+
+.featured-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.featured-post img {
+  width: 100%;
+}
+
+.featured-post h2{
+  display: inline;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.featured-post span{
+  font-weight: 300;
+}
+
 
 /* Cart */
 #cart-add {
