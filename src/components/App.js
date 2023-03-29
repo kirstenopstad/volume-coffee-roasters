@@ -29,7 +29,11 @@ function App() {
     </>
   } else {
     // show BOH
-    main = <InventoryControl showBOH={showBOH}/>
+    main = 
+    <>
+    <h2 className='text-center p-3'>Inventory Control</h2>
+    <InventoryControl showBOH={showBOH}/>
+    </>
   }
 
   return (
