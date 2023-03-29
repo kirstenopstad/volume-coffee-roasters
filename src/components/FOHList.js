@@ -1,5 +1,5 @@
 import React from "react";
-import FOHItem from './Item';
+import FOHItem from './FOHItem';
 import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 

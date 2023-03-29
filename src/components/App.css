@@ -4,6 +4,10 @@
   src: url(./../fonts/WindsorRegular.ttf);
 }
 
+#root {
+  background-color: #f6f5f4;
+}
+
 /* anchors */
 a, .footer a {
   color: white;
@@ -42,7 +46,7 @@ p {
 }
 
 .Site {
-  background-color: #F6F5F4;
+  background-color: #f6f5f4;
 }
 
 /* Header Nav */
@@ -177,8 +181,7 @@ p {
 }
 
 .inventory-list {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 15px;
 }
 
 .add-form {
@@ -191,6 +194,19 @@ p {
 .inventory-card {
   display: flex;
   justify-content: center;
+}
+.inventory-card div {
+  border-style: none;
+  background-color: transparent;
+}
+
+.inventory-card p, h4 {
+  text-align: left;
+  display: inline;
+}
+
+.inventory-card h4 {
+  font-size: x-large;
 }
 
 .inventory-card button {
@@ -207,4 +223,14 @@ p {
   flex-direction: row-reverse;
   align-items: center;
   padding-top: 10px
+}
+
+/* Cart */
+#cart-add {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-width: 2px;
 }

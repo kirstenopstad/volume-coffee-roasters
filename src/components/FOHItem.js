@@ -3,64 +3,33 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import addIcon from  './../img/icons/plus-lg.svg'
 
-const FOHItem = ({ name, origin, price, roast, poundsInStock, id, img, summary, onItemClick, whenSellClicked}) => {
-  
-  let stock = "";
-  let sellButtonText = "";
-  let sellButtonStatus = "";
-  if (poundsInStock < 1) {
-    stock = "Out of Stock";
-    sellButtonText = "Unvailable";
-    sellButtonStatus = "disabled";
-  } else {
-    sellButtonText = "Sell";
-    sellButtonStatus = "success";
-    stock = poundsInStock + " lbs. in Stock" ;
-  }
 
-  
-  const handleSellClick = (event) => {
-    event.preventDefault();
-    
-    let pounds = 0;
-
-    if (poundsInStock > 0) {
-      sellButtonStatus = "Sell";
-      pounds = (parseInt(poundsInStock) - 1 )
-    } else {
-      sellButtonStatus = "Out of Stock";
-    }
-
-    const updatedItem = {
-      name: name,
-      origin: origin,
-      price: price,
-      roast: roast,
-      summary: summary,
-      poundsInStock: pounds,
-      image: img,
-      key: id,
-      id: id,
-    }
-    whenSellClicked(updatedItem)
-  }
+const FOHItem = ({ name, origin, price, roast, id, img, onItemClick}) => {
 
   return (
+    // TODO: make title anchor tag, not div-click
     <React.Fragment>
       <Col className="inventory-card">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '21.5rem' }}>
           <Card.Img variant="top" src={img}/>
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
             <Card.Text>
-              {summary}
+              {roast}
+            <Card.Title onClick={() => onItemClick(id)}>
+              <h4>{name}</h4>
+              {` `}${price}
+            
+            </Card.Title>
             </Card.Text>
-            <p>{origin} ${price} {roast}</p>
-            <p>{stock}</p>
-          <form onSubmit={handleSellClick}>
-              <Button variant="secondary"  onClick={() => onItemClick(id)}>Details</Button>
-              <Button variant={sellButtonStatus} type="submit">{sellButtonText}</Button>
+          <form>
+            <div id="cart-add">
+              <p>Add to Cart</p>
+              <Button variant="outline-none" type="submit">
+                <img src={addIcon} alt="add item to cart" />
+              </Button>
+            </div>
           </form>
           </Card.Body>
         </Card>
@@ -81,4 +50,4 @@ FOHItem.propTypes = {
   onItemClick: PropTypes.func,
   whenSellClicked: PropTypes.func
 }
-export default Item;
+export default FOHItem;
