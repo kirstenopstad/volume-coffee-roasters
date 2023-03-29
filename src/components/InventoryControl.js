@@ -104,7 +104,12 @@ class InventoryControl extends React.Component {
     }
     
     // multipurpose button
-    let mpButton = <Button onClick={this.handleAddClick}>{addButtonText}</Button>;
+    let mpButton =  <Button 
+                      onClick={this.handleAddClick}
+                      variant="outline-dark"
+                      >
+                        {addButtonText}
+                    </Button>;
     // only show button in BOH
     if (!this.props.showBOH) {
       mpButton = null;

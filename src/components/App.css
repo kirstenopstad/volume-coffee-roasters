@@ -188,8 +188,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 10px;
 }
+
 
 .inventory-card {
   display: flex;
@@ -210,7 +212,7 @@ p {
 }
 
 .inventory-card button {
-  margin-right: 5px;
+  margin: 5px 5px 0 0;
 }
 
 /* Featured  */

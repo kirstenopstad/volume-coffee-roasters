@@ -12,10 +12,10 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, summary, onI
   if (poundsInStock < 1) {
     stock = "Out of Stock";
     sellButtonText = "Unvailable";
-    sellButtonStatus = "disabled";
+    sellButtonStatus = "secondary disabled";
   } else {
     sellButtonText = "Sell";
-    sellButtonStatus = "success";
+    sellButtonStatus = "outline-dark";
     stock = poundsInStock + " lbs. in Stock" ;
   }
 
@@ -49,17 +49,19 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, summary, onI
   return (
     <React.Fragment>
       <Col className="inventory-card">
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '21.5rem' }}>
           <Card.Img variant="top" src={img}/>
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
             <Card.Text>
-              {summary}
-            </Card.Text>
-            <p>{origin} ${price} {roast}</p>
+            {roast}
+            <Card.Title>
+              <h4>{name}</h4>
+              {` `}${price}
+            </Card.Title>
             <p>{stock}</p>
+            </Card.Text>
           <form onSubmit={handleSellClick}>
-              <Button variant="secondary"  onClick={() => onItemClick(id)}>Details</Button>
+              <Button variant="outline-dark"  onClick={() => onItemClick(id)}>Details</Button>
               <Button variant={sellButtonStatus} type="submit">{sellButtonText}</Button>
           </form>
           </Card.Body>
