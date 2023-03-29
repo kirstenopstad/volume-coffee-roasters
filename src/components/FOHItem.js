@@ -16,13 +16,12 @@ const FOHItem = ({ name, origin, price, roast, id, img, onItemClick}) => {
           <Card.Img variant="top" src={img}/>
           <Card.Body>
             <Card.Text>
-              {roast}
+              {origin}
+            </Card.Text>
             <Card.Title onClick={() => onItemClick(id)}>
               <h4>{name}</h4>
               {` `}${price}
-            
             </Card.Title>
-            </Card.Text>
           <form>
             <div id="cart-add">
               <p>Add to Cart</p>

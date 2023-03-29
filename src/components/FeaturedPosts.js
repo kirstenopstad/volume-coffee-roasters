@@ -11,9 +11,9 @@ const FeaturedPosts = () => {
     <Container>
       <Row xs={1} md={2}>
       {Posts.map((post) => 
-        <Col className="featured-post">
-          <img src={post.image} alt={post.caption}/>
-          <caption style={{fontSize: 'small'}}><i>Photo courtesy of {post.photoCredit}.</i></caption>
+        <Col className="featured-post" key={post.featureOrder}>
+          <img src={post.image} alt={post.caption} />
+            <p style={{fontSize: 'small', textAlign: 'left'}}><i>Photo courtesy of {post.photoCredit}.</i></p>
           <h2>
             {post.title}{` `} 
             <span>

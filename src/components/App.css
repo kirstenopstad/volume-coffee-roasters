@@ -181,7 +181,7 @@ p {
 }
 
 .inventory-list {
-  margin: 15px;
+  margin: 0 0 15px 0;
 }
 
 .add-form {
@@ -226,14 +226,14 @@ p {
 
 /* Featured  */
 .featured-img {
-  max-width: 350px;
+  width: 100%;
 }
 
 .featured-product {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  padding-top: 15px
+  padding-top: 15px;
 }
 
 .featured-post {
