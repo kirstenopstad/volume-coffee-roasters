@@ -39,22 +39,21 @@ function App() {
     if (cart.length > 0) {
       // for each item in cart
       cart.forEach((item) => {
+        // create array of cart keys
+        let cartKeys = Object.keys(cartQuantities)
         // if item not in Qty object, 
-        if (!Object.keys(cartQuantities).includes([item.id])) {
-          const key = item.id;
+        if (!cartKeys.includes(`${[item.id]}`)) {
           // add key to Quantities object and set value to one
-          cartQuantities = {...cartQuantities, [key]: 1 }
+          cartQuantities = {...cartQuantities, [item.id]: 1 }
           // else (if item in Qty object already)
         } else {
           // increment value by one
-          console.log(cartQuantities[item.id])
-          cartQuantities[item.id] = cartQuantities[item.id] + 1;
+          const updatedItemQty = cartQuantities[item.id] + 1;
+          cartQuantities = {...cartQuantities, [item.id]: updatedItemQty }
         }
       })
-      console.log(cartQuantities)
       return cartQuantities
     }
-    return
   }
 
   // conditional rendering
