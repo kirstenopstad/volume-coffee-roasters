@@ -7,8 +7,10 @@ import CloseButton from 'react-bootstrap/CloseButton';
 import cartIcon from './../img/icons/cart.svg'
 import PropTypes from 'prop-types'
 import trashIcon from './../img/icons/trash3.svg'
+import plusIcon from './../img/icons/plus.svg'
+import minusIcon from './../img/icons/dash.svg'
 
-const Cart = ({cart, cartSummary, onRemoveFromCart}) => {
+const Cart = ({cart, cartSummary, onRemoveFromCart, onDecrementFromCart, onAddToCart}) => {
   const [showCartSummary, setShowCartSummary] = useState(false)
 
   // calculate subtotal
@@ -16,7 +18,6 @@ const Cart = ({cart, cartSummary, onRemoveFromCart}) => {
     let sub = 0;
     cart.forEach((item) => {
       sub = sub + item.price;
-      console.log(sub)
     })
     return sub
   }
@@ -24,6 +25,16 @@ const Cart = ({cart, cartSummary, onRemoveFromCart}) => {
   // handle trash can icon click
   const handleDeleteClick = (item) => {
     onRemoveFromCart(item)
+  }
+  
+  // handle plus click
+  const handlePlusClick = (item) => {
+    onAddToCart(item)
+  }
+  
+  // handle minus click
+  const handleMinusClick = (item) => {
+    onDecrementFromCart(item)
   }
 
   let cartContent = 
@@ -56,31 +67,22 @@ const Cart = ({cart, cartSummary, onRemoveFromCart}) => {
             <tbody>
             {cartSummary.map((item) => 
               <tr key={item.id}>
-                <td>{item.quantity}</td>
+                <td className="text-center">
+                  <img src={plusIcon} alt={`Add another ${item.name} from cart`} onClick={() => handlePlusClick(item)} />
+                  <br/>
+                  {item.quantity}
+                  <br/>
+                  <img src={minusIcon} alt={`Remove a ${item.name} from cart`} onClick={() => handleMinusClick(item)} />
+                </td>
                 <td><img src={item.image} alt={item.name} style={{ width: '80px'}}/></td>
-                <td>{item.name}</td>
+                <td>{item.name}
+                </td>
                 <td>${item.price}</td>
                 <td><img src={trashIcon} alt="Remove item from cart" onClick={() => handleDeleteClick(item)} /></td>
               </tr>
             )}
             </tbody>
           </Table>
-      {/* {cartSummary.map((item) => 
-      <Row key={item.id}>
-        <Col>
-          <p>{item.quantity}</p>
-        </Col>
-        <Col>
-          <img src={item.image} alt={item.name} style={{ width: '80px'}}></img>
-        </Col>
-        <Col>
-          <p>{item.name}</p>
-        </Col>
-        <Col>
-          <p>${item.price}</p>
-        </Col>
-      </Row>
-      )} */}
       <Row>
         <Col>
           <p>Subtotal: ${subTotal()}</p>
@@ -99,6 +101,8 @@ Cart.propTypes = {
   cart: PropTypes.array,
   cartSummary: PropTypes.array,
   onRemoveFromCart: PropTypes.func,
+  onDecrementFromCart: PropTypes.func,
+  onAddToCart: PropTypes.func,
 }
 
 export default Cart;

@@ -36,7 +36,7 @@ function App() {
     setCartSummary(conciseCart)
   }
   
-  const handleRemoveFromCart = (item) => {
+  const handleDecrementItemInCart = (item) => {
     // get first instance of this type of item
     const itemToRemove = cart.filter(i => i.id === item.id)[0]
     // get index of itemToRemove
@@ -57,7 +57,23 @@ function App() {
       setCartSummary(conciseCart)
     }
   }
-
+  
+  const handleRemoveFromCart = (item) => {
+    // make copy of cart that removes all instances of item
+    const updatedCart = cart.filter(i => i.id != item.id)
+    // update cart
+    setCart(updatedCart)
+    // get updated cart summary
+    const cartSum = getCartSummary(updatedCart);
+    // if anything in cart
+    if (cart.length > 0) {
+      // distill to concise cart summary
+      const conciseCart = getConciseCart(updatedCart, cartSum)
+      // update cart summary
+      setCartSummary(conciseCart)
+    }
+  }
+  
   // handleUpdateCart = () => {}
   // handleEmptyCart = () => {}
   
@@ -135,7 +151,9 @@ function App() {
     showCart = <Cart 
       cart={cart} 
       cartSummary={cartSummary}
-      onRemoveFromCart={handleRemoveFromCart}/>
+      onRemoveFromCart={handleRemoveFromCart}
+      onDecrementFromCart={handleDecrementItemInCart}
+      onAddToCart={handleAddToCart}/>
   }
 
   return (
