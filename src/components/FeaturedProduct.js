@@ -11,7 +11,7 @@ const FeaturedProduct = () => {
     <Container>
       <Row md={2} className="featured-product">
         <Col>
-          <img src={featuredImage} alt="Primo Blend – A smooth roast, drinkable all day." className="featured-img"></img>
+          <img className="add-img-dim" src={featuredImage} alt="Primo Blend – A smooth roast, drinkable all day." className="featured-img"></img>
         </Col>
         <Col>
           <h2>Featured Blend</h2>

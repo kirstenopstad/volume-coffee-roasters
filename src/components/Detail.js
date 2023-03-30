@@ -20,9 +20,7 @@ const Detail = ({ item, onClose, onUpdateClick, showBOH }) => {
           <h3>Detail</h3>
           <CloseButton aria-label="Hide" onClick={onClose} />
         </div>
-
-        <Image src={item.image} fluid/>
-
+        <Image className="inventory-card-img" src={item.image} fluid/>
         <Table>
           <thead>
             <tr>

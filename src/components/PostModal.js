@@ -20,6 +20,7 @@ const PostModal = (props) => {
         <img 
           src={props.post.image} 
           alt={props.post.caption} 
+          className="post"
           style={{width: '100%', marginBottom: `15px`}}
         />
         <p>{props.post.tagline} coming soon!</p>

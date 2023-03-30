@@ -50,16 +50,16 @@ const Item = ({ name, origin, price, roast, poundsInStock, id, img, summary, onI
     <React.Fragment>
       <Col className="inventory-card">
         <Card style={{ width: '21.5rem' }}>
-          <Card.Img variant="top" src={img}/>
+          <Card.Img className="inventory-card-img" variant="top" src={img}/>
           <Card.Body>
             <Card.Text>
             {roast}
+            </Card.Text>
             <Card.Title>
               <h4>{name}</h4>
               {` `}${price}
             </Card.Title>
             <p>{stock}</p>
-            </Card.Text>
           <form onSubmit={handleSellClick}>
               <Button variant="outline-dark"  onClick={() => onItemClick(id)}>Details</Button>
               <Button variant={sellButtonStatus} type="submit">{sellButtonText}</Button>

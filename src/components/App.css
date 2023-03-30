@@ -144,6 +144,8 @@ p {
 
 .sub-modal img {
   max-width: 200px;
+  border-radius: 1%;
+  box-shadow: 2px 2px 15px #27272733;
 }
 
 .sub-modal p {
@@ -219,6 +221,11 @@ p {
   margin: 5px 5px 0 0;
 }
 
+.inventory-card-img {
+  border-radius: 1%;
+  box-shadow: 2px 2px 15px #27272733;
+}
+
 .update-header {
   display: flex;
   justify-content: space-between;
@@ -227,6 +234,8 @@ p {
 /* Featured  */
 .featured-img {
   width: 100%;
+  border-radius: 1%;
+  box-shadow: 2px 2px 15px #27272733;
 }
 
 .featured-product {
@@ -246,6 +255,11 @@ p {
 
 .featured-post img {
   width: 100%;
+}
+
+.post {
+  border-radius: 1%;
+  box-shadow: 2px 2px 15px #27272733;
 }
 
 .featured-post h2{
