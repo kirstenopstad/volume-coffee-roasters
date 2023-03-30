@@ -19,7 +19,7 @@ const FOHItem = ({ item, onItemClick, onAddToCart}) => {
     <React.Fragment>
       <Col className="inventory-card">
         <Card style={{ width: '21.5rem' }}>
-          <Card.Img variant="top" src={image}/>
+          <Card.Img className="inventory-card-img" variant="top" src={image}/>
           <Card.Body>
             <Card.Text>
               {origin}

@@ -74,7 +74,7 @@ const Cart = ({cart, cartSummary, onRemoveFromCart, onDecrementFromCart, onAddTo
                   <br/>
                   <img src={minusIcon} alt={`Remove a ${item.name} from cart`} onClick={() => handleMinusClick(item)} />
                 </td>
-                <td><img src={item.image} alt={item.name} style={{ width: '80px'}}/></td>
+                <td><img className="inventory-card-img" src={item.image} alt={item.name} style={{ width: '80px'}}/></td>
                 <td>{item.name}
                 </td>
                 <td>${item.price}</td>
