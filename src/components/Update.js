@@ -13,7 +13,7 @@ const Update = ({ item, onUpdateSubmit, toggleShowUpdateForm, onClose }) => {
       origin: (event.target.origin.value) ? (event.target.origin.value): name,
       price: (parseInt(event.target.price.value)) ? (parseInt(event.target.price.value)): price,
       roast: (event.target.roast.value) ? (event.target.roast.value): roast,
-      poundsInStock: (parseInt(event.target.pounds.value) ? (parseInt(event.target.pounds.value)): poundsInStock),
+      poundsInStock: (parseInt(event.target.poundsInStock.value) ? (parseInt(event.target.poundsInStock.value)): poundsInStock),
       image: image,
       summary: (event.target.summary.value) ? (event.target.summary.value): summary, 
       id: id
