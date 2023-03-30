@@ -24,7 +24,7 @@ const FOHList = ({ items, onItemClick, handleAddToCart }) => {
 FOHList.propTypes = {
   items: PropTypes.array,
   onItemClick: PropTypes.func,
-  handleAddToCart: PropTypes.func
+  handleAddToCart: PropTypes.func,
 }
 
 export default FOHList;

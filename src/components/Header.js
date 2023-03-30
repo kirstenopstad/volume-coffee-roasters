@@ -48,7 +48,6 @@ const Header = () => {
                 <Nav.Link href="#blog">Blog</Nav.Link>
                 <Nav.Link href="#order">Order</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
-        
               </Nav>
               <Nav>
                 <Nav.Link eventKey={2} href="#memes">
