@@ -31,27 +31,27 @@ const Update = ({ item, onUpdateSubmit, toggleShowUpdateForm, onClose }) => {
       <Form onSubmit={handleFormSubmission}>
         <Form.Group className="mb-3">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder={name} name="name" />
+            <Form.Control type="text" placeholder={name} name="name"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Origin</Form.Label>
-            <Form.Control type="text" placeholder={origin} name="origin" />
+            <Form.Control type="text" placeholder={origin} name="origin"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Price</Form.Label>
-            <Form.Control type="text" placeholder={price} name="price" />
+            <Form.Control type="text" placeholder={price} name="price"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Roast</Form.Label>
-            <Form.Control type="text" placeholder={roast} name="roast" />
+            <Form.Control type="text" placeholder={roast} name="roast"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>PoundsInStock</Form.Label>
-            <Form.Control type="text" placeholder={poundsInStock} name="poundsInStock" />
+            <Form.Control type="text" placeholder={poundsInStock} name="poundsInStock"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Summary</Form.Label>
-            <Form.Control type="text" placeholder={summary} name="summary" />
+            <Form.Control type="text" placeholder={summary} name="summary"/>
         </Form.Group>
         <Button type="submit" variant="outline-dark">Update</Button>
       </Form>
