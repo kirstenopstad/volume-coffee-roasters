@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
 import CloseButton from 'react-bootstrap/CloseButton';
 import cartIcon from './../img/icons/cart.svg'
 import PropTypes from 'prop-types'
+import trashIcon from './../img/icons/trash3.svg'
 
-const Cart = ({cart, cartSummary}) => {
+const Cart = ({cart, cartSummary, onRemoveFromCart}) => {
   const [showCartSummary, setShowCartSummary] = useState(false)
 
   // calculate subtotal
@@ -17,6 +19,11 @@ const Cart = ({cart, cartSummary}) => {
       console.log(sub)
     })
     return sub
+  }
+
+  // handle trash can icon click
+  const handleDeleteClick = (item) => {
+    onRemoveFromCart(item)
   }
 
   let cartContent = 
@@ -37,7 +44,28 @@ const Cart = ({cart, cartSummary}) => {
           />
         </Col>
       </Row>
-      {cartSummary.map((item) => 
+          <Table>
+            <thead>
+              <tr>
+                <th>Qty</th>
+                <th>Item</th>
+                <th></th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+            {cartSummary.map((item) => 
+              <tr key={item.id}>
+                <td>{item.quantity}</td>
+                <td><img src={item.image} alt={item.name} style={{ width: '80px'}}/></td>
+                <td>{item.name}</td>
+                <td>${item.price}</td>
+                <td><img src={trashIcon} alt="Remove item from cart" onClick={() => handleDeleteClick(item)} /></td>
+              </tr>
+            )}
+            </tbody>
+          </Table>
+      {/* {cartSummary.map((item) => 
       <Row key={item.id}>
         <Col>
           <p>{item.quantity}</p>
@@ -52,7 +80,7 @@ const Cart = ({cart, cartSummary}) => {
           <p>${item.price}</p>
         </Col>
       </Row>
-      )}
+      )} */}
       <Row>
         <Col>
           <p>Subtotal: ${subTotal()}</p>
@@ -69,7 +97,8 @@ const Cart = ({cart, cartSummary}) => {
 
 Cart.propTypes = {
   cart: PropTypes.array,
-  cartSummary: PropTypes.array
+  cartSummary: PropTypes.array,
+  onRemoveFromCart: PropTypes.func,
 }
 
 export default Cart;

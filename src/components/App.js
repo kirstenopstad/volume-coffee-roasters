@@ -37,10 +37,25 @@ function App() {
   }
   
   const handleRemoveFromCart = (item) => {
-    // get list of instances of this type of item
-    const itemToRemove = cart.filter(i => i.id === item.id)
-    // if one, filter from cart and move on
-    // if more than one...
+    // get first instance of this type of item
+    const itemToRemove = cart.filter(i => i.id === item.id)[0]
+    // get index of itemToRemove
+    const indexToRemove = cart.indexOf(itemToRemove)
+    // make copy of cart
+    const updatedCart = [...cart]
+    // splice it out of the cart
+    updatedCart.splice(indexToRemove, 1)
+    // update cart
+    setCart(updatedCart)
+    // get updated cart summary
+    const cartSum = getCartSummary(updatedCart);
+    // if anything in cart
+    if (cart.length > 0) {
+      // distill to concise cart summary
+      const conciseCart = getConciseCart(updatedCart, cartSum)
+      // update cart summary
+      setCartSummary(conciseCart)
+    }
   }
 
   // handleUpdateCart = () => {}
@@ -74,22 +89,22 @@ function App() {
   // use cart summary to build concise cart (just items that have been added to cart with quantity info)
   const getConciseCart = (cart, cartSummary) => {
     // add detailed object info to each obecjt in cartSummary
-    // init empty conciseCart array
-    let conciseCart = [];
-    // for each key in cartSummary
-    Object.keys(cartSummary).forEach((key) => {
-      // get item to copy in by filtering by id
-      let itemDetails = cart.filter(i => i.id === key)[0]
-      // get quantity of that item
-      let qty = cartSummary[key]
-      // get itemSummary
-      let itemSummary = {...itemDetails, quantity: qty}
-      // add itemSummary obj to concise Cart
-      conciseCart = [...conciseCart, itemSummary]
-    })
-
-
-    return conciseCart
+    if (cart.length > 0) {
+      // init empty conciseCart array
+      let conciseCart = [];
+      // for each key in cartSummary
+      Object.keys(cartSummary).forEach((key) => {
+        // get item to copy in by filtering by id
+        let itemDetails = cart.filter(i => i.id === key)[0]
+        // get quantity of that item
+        let qty = cartSummary[key]
+        // get itemSummary
+        let itemSummary = {...itemDetails, quantity: qty}
+        // add itemSummary obj to concise Cart
+        conciseCart = [...conciseCart, itemSummary]
+      })
+      return conciseCart
+    }
   } 
 
   // conditional rendering
@@ -101,7 +116,10 @@ function App() {
     <>
     <FeaturedProduct />
     <FeaturedPosts />
-    <InventoryControl showBOH={showBOH} handleAddToCart={handleAddToCart}/>
+    <InventoryControl 
+      showBOH={showBOH} 
+      handleAddToCart={handleAddToCart}
+      handleRemoveFromCart={handleRemoveFromCart} />
     </>
   } else {
     // show BOH
@@ -114,7 +132,10 @@ function App() {
   // if anything in cart, show cart icon
   let showCart = null;
   if (cart.length > 0) {
-    showCart = <Cart cart={cart} cartSummary={cartSummary}/>
+    showCart = <Cart 
+      cart={cart} 
+      cartSummary={cartSummary}
+      onRemoveFromCart={handleRemoveFromCart}/>
   }
 
   return (
