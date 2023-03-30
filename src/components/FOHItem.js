@@ -8,7 +8,7 @@ import addIcon from  './../img/icons/plus-lg.svg'
 
 const FOHItem = ({ item, onItemClick, onAddToCart}) => {
 
-  const {name, origin, price, roast, id, img} = item;
+  const {name, origin, price, id, image} = item;
 
   const handleAddItem = (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const FOHItem = ({ item, onItemClick, onAddToCart}) => {
     <React.Fragment>
       <Col className="inventory-card">
         <Card style={{ width: '21.5rem' }}>
-          <Card.Img variant="top" src={img}/>
+          <Card.Img variant="top" src={image}/>
           <Card.Body>
             <Card.Text>
               {origin}
@@ -44,14 +44,7 @@ const FOHItem = ({ item, onItemClick, onAddToCart}) => {
 }
 
 FOHItem.propTypes = {
-  name: PropTypes.string,
-  origin: PropTypes.string,
-  price: PropTypes.number,
-  roast: PropTypes.string, 
-  unitsInStock: PropTypes.number,
-  poundsInStock: PropTypes.number,
-  summary: PropTypes.string,
-  id: PropTypes.string,
+  item: PropTypes.object,
   onItemClick: PropTypes.func,
   onAddToCart: PropTypes.func,
 }
