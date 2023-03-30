@@ -49,7 +49,7 @@ const Add = ({ onAddClick }) => {
           <Form.Label>Profile</Form.Label>
           <Form.Control as="textarea" rows={3} placeholder="Describe the flavor profile." name="summary" />
         </Form.Group>
-        <Button type="submit">Add</Button>
+        <Button type="submit" variant="outline-dark">Add</Button>
       </Form>
     </React.Fragment>
   );

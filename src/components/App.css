@@ -4,6 +4,10 @@
   src: url(./../fonts/WindsorRegular.ttf);
 }
 
+#root {
+  background-color: #f6f5f4;
+}
+
 /* anchors */
 a, .footer a {
   color: white;
@@ -42,13 +46,14 @@ p {
 }
 
 .Site {
-  background-color: #F6F5F4;
+  background-color: #f6f5f4;
 }
 
 /* Header Nav */
 
 .header {
   background-color: #272727;
+  overflow: hidden;
 }
 .navigation {
   background-color: #272727;
@@ -64,31 +69,45 @@ p {
 
 /* Hero */
 
+.hero div {
+  width: 100v;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-mask {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.hero h1, span, p {
+  text-align: center;
+}
+
 .hero h1 {
   font-size: xx-large;
   font-weight: 900
   ;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-mask {
-  opacity: 0.6;
+.hero span {
+  font-size: x-large;
+  font-weight: 600
 }
 
 .hero p {
   font-size: small;  
+  font-weight: 400
 }
 
-.hero span {
-  font-size: .7em;
-  font-weight: 600
-}
 
 /* Footer Styling */
 .footer {
@@ -162,8 +181,7 @@ p {
 }
 
 .inventory-list {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 0 15px 0;
 }
 
 .add-form {
@@ -173,23 +191,113 @@ p {
   padding: 10px;
 }
 
+.add-form button {
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+
 .inventory-card {
   display: flex;
   justify-content: center;
 }
+.inventory-card div {
+  border-style: none;
+  background-color: transparent;
+}
+
+.inventory-card p, h4 {
+  text-align: left;
+  display: inline;
+}
+
+.inventory-card h4 {
+  font-size: x-large;
+}
 
 .inventory-card button {
-  margin-right: 5px;
+  margin: 5px 5px 0 0;
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Featured  */
 .featured-img {
-  max-width: 350px;
+  width: 100%;
 }
 
 .featured-product {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  padding-top: 10px
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.featured-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.featured-post img {
+  width: 100%;
+}
+
+.featured-post h2{
+  display: inline;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.featured-post span{
+  font-weight: 300;
+}
+
+
+/* Cart */
+#cart-add {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-width: 2px;
+}
+
+.cart {
+  position: fixed;
+  height: fit-content;
+  top: 110px;
+  right: 10px;
+}
+
+.cart-summary {
+  background-color: #f6f5f4;
+  padding: 15px;
+  margin: 15px;
+}
+.cart-summary div {
+  width: 100%;
+  margin: 0 0 5px 5px
+}
+
+.cart-icon {
+  width: 50px;
+  margin-left: 13px;
+  margin-top: 13px;
+}
+
+.cart-circle {
+  background-color: #f6f5f4;
+  border-radius: 50%;
+  border-color: #272727;
+  border-style: solid;
+  height: 80px;
+  width: 80px;
+  opacity: .9;
 }

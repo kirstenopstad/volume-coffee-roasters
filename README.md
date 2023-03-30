@@ -37,11 +37,11 @@ At Volume Coffee Roasters, we use the FOH part of our web app to sell coffee bea
 
 __User Storeis:__
 
-* As a user, I want to be able to toggle between FOH and BOH
-* As a user, I want the site to be easy to use and nicely styled
+* ✅ As a user, I want to be able to toggle between FOH and BOH
+* ✅  As a user, I want the site to be easy to use and nicely styled
 
 __FOH User Stories:__
-* As a FOH user, I want to first see a Landing page (area) that includes a bold, call-to-action to allow customers to subscribe to our mailing list in two clicks.
+* ✅ As a FOH user, I want to first see a Landing page (area) that includes a bold, call-to-action to allow customers to subscribe to our mailing list in two clicks.
 * ✅ As a FOH user, I want to be able to contact the company directly from the footer & see company contact info
 
 __BOH User Stories:__
@@ -64,20 +64,24 @@ __FOH User Stories (Stretch):__
   * View cart summary
 
 __BOH User Stories (Stretch):__
-* As a user, I want the option to edit a coffee sack's properties after entering them just in case I make a mistake.
+* ✅ As a user, I want the option to edit a coffee sack's properties after entering them just in case I make a mistake.
 * As a user, I want to be able to delete a coffee sack.
-* As a user, I want a coffee sack to update to say "Out of Stock" once it's empty.
+* ✅ As a user, I want a coffee sack to update to say "Out of Stock" once it's empty.
 * As a user, I want coffee sacks with less than 10 pounds to include a message that says "Almost Empty" so I can buy a pound of it before it's gone!
 * As a user, I want to have coffee prices to be color-coded for easy readability. This could be based on their price, their origin or roast, or the amount of pounds left.
+
 ***
 ## Process 
 
+### Roadmap
+![Roadmap](./src/img/roadmap.png)
 ### Component Drawing
 [![Component Drawing](./src/img/component_diagram.png)](https://www.figma.com/file/9yZdrlZDInV6346toTdG2Z/CoffeeShop?node-id=0%3A1&t=SaS3WUYroyADmYHv-1)
 ### Mockup (FOH)
 ![Mockup Front of House](./src/img/mockup-foh.png)
 ### Mockup (BOH)
 ![Mockup Back of House](./src/img/mockup-boh.png)
+
 
 ***
 ## Implementation

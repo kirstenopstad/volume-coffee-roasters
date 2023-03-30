@@ -1,6 +1,7 @@
 import React from "react";
 import inventorySeedData from "./InventorySeedData";
 import List from  './List';
+import FOHList from  './FOHList';
 import Detail from './Detail';
 import Add from './Add';
 import Update from './Update';
@@ -18,6 +19,8 @@ class InventoryControl extends React.Component {
     }
   }
 
+  // this.props.handleAddToCart(item)
+
   handleDisplayDetail = (id) => {
     const detailItem = this.state.inventory.filter(element => element.id === id)[0];
     this.setState({selectedItem: detailItem})
@@ -25,6 +28,10 @@ class InventoryControl extends React.Component {
 
   handleCloseDetail = () => {
     this.setState({selectedItem: null})
+  }
+  
+  handleCloseUpdate = () => {
+    this.setState({showUpdateForm: false})
   }
   
   handleAddClick = () => {
@@ -60,16 +67,23 @@ class InventoryControl extends React.Component {
   }
   
   render() {
-
     // conditional rendering
     let detail = null;
     let addForm = null;
     // let updateForm = null;
     let addButtonText = null;
-    let inventoryList = <List  
+    let inventoryList = <FOHList  
     items={this.state.inventory}
     onItemClick={this.handleDisplayDetail}
-    onQuickSellClick={this.handleUpdateItem}/>
+    handleAddToCart={this.props.handleAddToCart}/>
+    
+    // 
+    if (this.props.showBOH) {
+      inventoryList = <List  
+      items={this.state.inventory}
+      onItemClick={this.handleDisplayDetail}
+      onQuickSellClick={this.handleUpdateItem}/>
+    }
     
     if (this.state.selectedItem !== null) {
       inventoryList = null;
@@ -77,12 +91,14 @@ class InventoryControl extends React.Component {
         detail = <Update 
                     item={this.state.selectedItem} 
                     toggleShowUpdateForm={this.handleUpdateClick}
+                    onClose={this.handleCloseUpdate}
                     onUpdateSubmit={this.handleUpdateItem} />
       } else {
         detail = <Detail 
                     item={this.state.selectedItem} 
                     onUpdateClick={this.handleUpdateClick}
-                    onClose={this.handleCloseDetail}/>
+                    onClose={this.handleCloseDetail}
+                    showBOH={this.props.showBOH}/>
       }
     }
     
@@ -94,8 +110,18 @@ class InventoryControl extends React.Component {
     } else {
       addButtonText = "Add Roast";
     }
+    
     // multipurpose button
-    let mpButton = <Button onClick={this.handleAddClick}>{addButtonText}</Button>;
+    let mpButton =  <Button 
+                      onClick={this.handleAddClick}
+                      variant="outline-dark"
+                      >
+                        {addButtonText}
+                    </Button>;
+    // only show button in BOH
+    if (!this.props.showBOH) {
+      mpButton = null;
+    }
 
     return(
       <React.Fragment>
