@@ -48,6 +48,7 @@ const Footer = ({toggleBOH}) => {
     <div className="footer">
         <Row xs={1} md={3}>
           <Col className="contact-form">
+            <a id="contact" />
             <Form ref={form} onSubmit={sendEmail}>
                 <Form.Group className="mb-3" controlId="formGroupName">
                   <Form.Label>Name</Form.Label>

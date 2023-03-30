@@ -18,6 +18,7 @@ const FeaturedPosts = () => {
   return(
     <>
     <Container>
+      <a id="blog"/>
       <Row xs={1} md={2} className="mb-15">
       {Posts.map((post) => 
         <Col className="featured-post" key={post.featureOrder}>
