@@ -8,7 +8,6 @@ import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
 import FeaturedPosts from './FeaturedPosts';
 import Cart from './Cart';
-import cartIcon from './../img/icons/cart.svg'
 
 
 function App() {
@@ -26,6 +25,36 @@ function App() {
   const handleAddToCart = (item) => {
     let updatedCart = [...cart, item];
     setCart(updatedCart)
+  }
+  
+  // handleRemoveFromCart = (item) => {}
+  // handleUpdateCart = () => {}
+  // handleEmptyCart = () => {}
+  
+  // count instances of each type of item in cart and store qty of each
+  const sortCart = (cart) => {
+    // init Quantities
+    let cartQuantities = {};
+    // if anything is in the cart
+    if (cart.length > 0) {
+      // for each item in cart
+      cart.forEach((item) => {
+        // if item not in Qty object, 
+        if (!Object.keys(cartQuantities).includes([item.id])) {
+          const key = item.id;
+          // add key to Quantities object and set value to one
+          cartQuantities = {...cartQuantities, [key]: 1 }
+          // else (if item in Qty object already)
+        } else {
+          // increment value by one
+          console.log(cartQuantities[item.id])
+          cartQuantities[item.id] = cartQuantities[item.id] + 1;
+        }
+      })
+      console.log(cartQuantities)
+      return cartQuantities
+    }
+    return
   }
 
   // conditional rendering
