@@ -10,15 +10,6 @@ const FOHList = ({ items, onItemClick, handleAddToCart }) => {
         {items.map((element) =>  
           <FOHItem
           item={element} 
-          // name={element.name}
-          // origin={element.origin}
-          // price={element.price}
-          // roast={element.roast}
-          // unitsInStock={element.unitsInStock}
-          // poundsInStock={element.poundsInStock}
-          // img={element.image}
-          // summary={element.summary}
-          // id={element.id}
           key={element.id} 
           onItemClick={onItemClick}
           onAddToCart={handleAddToCart}/>
