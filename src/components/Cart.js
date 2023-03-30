@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import CloseButton from 'react-bootstrap/CloseButton';
 import cartIcon from './../img/icons/cart.svg'
 import PropTypes from 'prop-types'
-import { propTypes } from "react-bootstrap/esm/Image";
 
 const Cart = ({cart, cartSummary}) => {
   const [showCartSummary, setShowCartSummary] = useState(false)
@@ -19,27 +18,6 @@ const Cart = ({cart, cartSummary}) => {
     })
     return sub
   }
-
-  // use cart summary to build concise cart (just items that have been added to cart with quantity info)
-  const getConciseCart = () => {
-    // add detailed object info to each obecjt in cartSummary
-    // init empty conciseCart array
-    let conciseCart = [];
-    // for each key in cartSummary
-    Object.keys(cartSummary).forEach((key) => {
-      // get item to copy in by filtering by id
-      let itemDetails = cart.filter(i => i.id === key)[0]
-      // get quantity of that item
-      let qty = cartSummary[key]
-      // get itemSummary
-      let itemSummary = {...itemDetails, quantity: qty}
-      // add itemSummary obj to concise Cart
-      conciseCart = [...conciseCart, itemSummary]
-    })
-    return conciseCart
-  } 
-
-  const conciseCart = getConciseCart();
 
   let cartContent = 
     <div className="cart-circle">
@@ -59,7 +37,7 @@ const Cart = ({cart, cartSummary}) => {
           />
         </Col>
       </Row>
-      {conciseCart.map((item) => 
+      {cartSummary.map((item) => 
       <Row key={item.id}>
         <Col>
           <p>{item.quantity}</p>
@@ -91,7 +69,7 @@ const Cart = ({cart, cartSummary}) => {
 
 Cart.propTypes = {
   cart: PropTypes.array,
-  cartSummary: PropTypes.object
+  cartSummary: PropTypes.array
 }
 
 export default Cart;
