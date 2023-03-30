@@ -104,8 +104,8 @@ __BOH User Stories (Stretch):__
 
 ***
 ## Goals
-1. Meet MVP
-2. Stretch: build cart feature
+1. ✅ Meet MVP
+2. 📌 Stretch: build cart feature
 3. Stretch: build Know Your Strength quiz
 
 ***
