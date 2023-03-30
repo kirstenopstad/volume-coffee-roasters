@@ -4,8 +4,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CloseButton from 'react-bootstrap/CloseButton';
 import cartIcon from './../img/icons/cart.svg'
+import PropTypes from 'prop-types'
+import { propTypes } from "react-bootstrap/esm/Image";
 
-const Cart = ({cart}) => {
+const Cart = ({cart, cartSummary}) => {
   const [showCartSummary, setShowCartSummary] = useState(false)
 
   // calculate subtotal
@@ -17,6 +19,27 @@ const Cart = ({cart}) => {
     })
     return sub
   }
+
+  // use cart summary to build concise cart (just items that have been added to cart with quantity info)
+  const getConciseCart = () => {
+    // add detailed object info to each obecjt in cartSummary
+    // init empty conciseCart array
+    let conciseCart = [];
+    // for each key in cartSummary
+    Object.keys(cartSummary).forEach((key) => {
+      // get item to copy in by filtering by id
+      let itemDetails = cart.filter(i => i.id === key)[0]
+      // get quantity of that item
+      let qty = cartSummary[key]
+      // get itemSummary
+      let itemSummary = {...itemDetails, quantity: qty}
+      // add itemSummary obj to concise Cart
+      conciseCart = [...conciseCart, itemSummary]
+    })
+    return conciseCart
+  } 
+
+  const conciseCart = getConciseCart();
 
   let cartContent = 
     <div className="cart-circle">
@@ -36,8 +59,11 @@ const Cart = ({cart}) => {
           />
         </Col>
       </Row>
-      {cart.map((item) => 
+      {conciseCart.map((item) => 
       <Row key={item.id}>
+        <Col>
+          <p>{item.quantity}</p>
+        </Col>
         <Col>
           <img src={item.image} alt={item.name} style={{ width: '80px'}}></img>
         </Col>
@@ -61,6 +87,11 @@ const Cart = ({cart}) => {
     {cartContent}
     </div>
   )
+}
+
+Cart.propTypes = {
+  cart: PropTypes.array,
+  cartSummary: PropTypes.object
 }
 
 export default Cart;

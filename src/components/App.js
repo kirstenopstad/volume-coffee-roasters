@@ -13,6 +13,7 @@ import Cart from './Cart';
 function App() {
   const [showBOH, setShowBOH] = useState(false);
   const [cart, setCart] = useState([]);
+  const [cartSummary, setCartSummary] = useState({});
 
   const toggleBOH = (showStatus) => {
     if (showStatus) {
@@ -23,8 +24,10 @@ function App() {
   }
 
   const handleAddToCart = (item) => {
-    let updatedCart = [...cart, item];
-    setCart(updatedCart)
+    const updatedCart = [...cart, item];
+    setCart(updatedCart);
+    const cartSum = sortCart(updatedCart);
+    setCartSummary(cartSum)
   }
   
   // handleRemoveFromCart = (item) => {}
@@ -78,7 +81,7 @@ function App() {
   // if anything in cart, show cart icon
   let showCart = null;
   if (cart.length > 0) {
-    showCart = <Cart cart={cart}/>
+    showCart = <Cart cart={cart} cartSummary={cartSummary}/>
   }
 
   return (
