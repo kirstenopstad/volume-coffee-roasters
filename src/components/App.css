@@ -25,6 +25,10 @@ a:visited, .footer a:visited {
   color: lightgray;
 }
 
+.featured-product a:visited {
+  color: #272727;
+}
+
 /* mouse over link */
 a:hover, .footer a:hover {
   font-weight: 500;
