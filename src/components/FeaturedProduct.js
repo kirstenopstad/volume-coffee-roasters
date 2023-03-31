@@ -16,7 +16,7 @@ const FeaturedProduct = () => {
         <Col>
           <h2>Featured Blend</h2>
           <h3>A smooth, all-day drinker.</h3>
-          <Button variant="outline-dark">Get Blend</Button>
+          <Button variant="outline-dark" href="#order">Get Blend</Button>
         </Col>
       </Row>
 
