@@ -22,33 +22,121 @@ const PostSeedData = [
   featureOrder: 2,
   quizQuestions: [
     {
-      question: "Sample Q",
+      question: "Describe your taste philosophy",
       name: "q1",
       answers: [
         {
-          answer: "Answer A",
+          answer: "Flavor is enhanced by environment – smells, sights, sounds",
           value: "a"
         },
         {
-         answer: "Answer B",
+         answer: "Anything tastes better with a little cinnamon in it",
          value: "b"
         },
         {
-          answer: "Answer C",
+          answer: "Either you have it or you don't",
           value: "c"
         },
         {
-          answer: "Answer D",
+          answer: "Variety is the spice of life",
           value: "d"
         }
       ]
-    }
+    },
+    {
+      question: "Time is...",
+      name: "q2",
+      answers: [
+        {
+          answer: "Relative",
+          value: "a"
+        },
+        {
+         answer: "Precious",
+         value: "b"
+        },
+        {
+          answer: "Elastic",
+          value: "c"
+        },
+        {
+          answer: "Money",
+          value: "d"
+        }
+      ]
+    },
+    {
+      question: "Your kitchen is your -",
+      name: "q3",
+      answers: [
+        {
+          answer: "Workshop",
+          value: "a"
+        },
+        {
+         answer: "Kitchen",
+         value: "b"
+        },
+        {
+          answer: "Sanctuary",
+          value: "c"
+        },
+        {
+          answer: "Showroom",
+          value: "d"
+        }
+      ]
+    },
+    {
+      question: "Grinder profile?",
+      name: "q4",
+      answers: [
+        {
+          answer: "Electric with multiple settings",
+          value: "a"
+        },
+        {
+         answer: "Whatever they do at the factory",
+         value: "b"
+        },
+        {
+          answer: "Hand-ground fresh everyday",
+          value: "c"
+        },
+        {
+          answer: "Grinders were abstracted away years ago",
+          value: "d"
+        }
+      ]
+    },
+    {
+      question: "Your vibe",
+      name: "q5",
+      answers: [
+        {
+          answer: "Easy to please, hard to win over.",
+          value: "a"
+        },
+        {
+         answer: "Low maintenance, loves dogs.",
+         value: "b"
+        },
+        {
+          answer: "Black coffee, straight bourbon, can't lose.",
+          value: "c"
+        },
+        {
+          answer: "One can never be overdressed.",
+          value: "d"
+        }
+      ]
+    },
   ],
   quizKey: {
-    a: "WinnerA",
-    b: "WinnerB",
-    c: "WinnerC",
-    d: "WinnerD"
+    a: "Pour Over",
+    b: "Drip Coffee Machine",
+    c: "French Press",
+    d: "Espresso Machine"
   }
 },
 
