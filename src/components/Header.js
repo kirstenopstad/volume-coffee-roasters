@@ -32,7 +32,7 @@ const SubscribeModal = (props) => {
   );
 }
 
-const Header = () => {
+const Header = ({handleKnowYourStrengthClick}) => {
   const [modalShow, setModalShow] = React.useState(false);
   
   return(
@@ -50,8 +50,8 @@ const Header = () => {
                 <Nav.Link href="#contact">Contact</Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link eventKey={2} href="#memes">
-                  <Button variant="outline-light">Know Your Strength</Button>
+                <Nav.Link href="#know-your-strength">
+                  <Button variant="outline-light" onClick={handleKnowYourStrengthClick}>Know Your Strength</Button>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>

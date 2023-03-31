@@ -6,8 +6,10 @@ import Form from 'react-bootstrap/Form';
 const Quiz = ({quizData, quizKey}) => {
   const [winners, setWinners] = useState([])
 
-// tallyFunction (from lang-selector refactor)
- function tallyResults(ansList) {
+  console.log(quizData)
+  console.log(quizKey)
+  // tallyFunction (from lang-selector refactor)
+  function tallyResults(ansList) {
   // takes an array of answer keys (a, b, c, d) and outputs an array of winners
 
     // Init tallies
@@ -103,10 +105,10 @@ const Quiz = ({quizData, quizKey}) => {
   if (!quizData) {
     return 
   } else {
-
       return (
         <>
         <Form onSubmit={handleQuizSubmission}>
+          <a id="know-your-strength" />
           {quizData.map((question) => (
             <div key={`quiz-${question.name}`} className="mb-3">
               <Form.Group className="mb-3" controlId="formBasicEmail">

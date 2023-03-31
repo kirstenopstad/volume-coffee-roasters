@@ -4,13 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Quiz from "./Quiz";
 
 const PostModal = (props) => {
-  // const [showQuiz, setShowQuiz]
-  // // TODO: conditionally render quiz component 
-  // let quiz = null;
-  // console.log(props.post)
-  // if (props.post.quizData !== undefined) {
-  //   console.log(props.post.quizData)
-  //   quiz = 
 
   return (
     <Modal
@@ -31,7 +24,7 @@ const PostModal = (props) => {
           className="post"
           style={{width: '100%', marginBottom: `15px`}}
         />
-        <p>{props.post.tagline} coming soon!</p>
+        <p>{props.post.tagline}</p>
         <Quiz 
           quizData={props.post.quizQuestions}
           quizKey={props.post.quizKey}/>
