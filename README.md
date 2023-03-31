@@ -58,7 +58,7 @@ __FOH User Stories (Stretch):__
 * As a FOH user, I want to see a featured blend with a link to purchase 
 * As a FOH user, I want to be able to click to:
     * ✅ view blog details
-    * take Know Your Strength quiz.
+    * ✅ take Know Your Strength quiz.
 * ✅ As a FOH user, I want to be able to 
   * ✅ Add items to a cart
   * ✅ Remove items from a cart
@@ -84,7 +84,6 @@ __BOH User Stories (Stretch):__
 ### Mockup (BOH)
 ![Mockup Back of House](./src/img/mockup-boh.png)
 
-
 ***
 ## Implementation
 0. ✅ Build mock up for FOH
@@ -108,7 +107,7 @@ __BOH User Stories (Stretch):__
 ## Goals
 1. ✅ Meet MVP
 2. ✅ Stretch: build cart feature
-3. 📌 Stretch: build Know Your Strength quiz
+3. ✅ Stretch: build Know Your Strength quiz
 
 ***
 ## Setup/Installation Requirements
