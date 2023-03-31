@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Quiz from "./Quiz";
 
 const PostModal = (props) => {
-  // TODO: conditionally render quiz component 
+  // const [showQuiz, setShowQuiz]
+  // // TODO: conditionally render quiz component 
+  // let quiz = null;
+  // console.log(props.post)
+  // if (props.post.quizData !== undefined) {
+  //   console.log(props.post.quizData)
+  //   quiz = 
+
   return (
     <Modal
       {...props}
@@ -28,6 +35,7 @@ const PostModal = (props) => {
         <Quiz 
           quizData={props.post.quizQuestions}
           quizKey={props.post.quizKey}/>
+  
       </Modal.Body>
       <Modal.Footer>
         <Button variant="outline-dark" onClick={props.onHide}>Close</Button>

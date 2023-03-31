@@ -86,43 +86,53 @@ const Quiz = ({quizData, quizKey}) => {
   }
 
   // get results
-  let results = "";
+  let results = null;
   if (winners.length > 0) {
     // Add first winner
       results = quizKey[winners[0]]
-    
-    // Add tied winner(s) 
-    for (let i = 1; i < winners.length; i++) {
-      results = results + ` & ${quizKey[winners[i]]}`
-    } 
+      results = <h4><i>Your</i> Strength? {results}</h4>
+    // // Add tied winner(s) 
+    // for (let i = 1; i < winners.length; i++) {
+    //   results = results + ` & ${quizKey[winners[i]]}`
+    // } 
   }
 
- 
-  return (
-    <>
-    <Form onSubmit={handleQuizSubmission}>
-      {quizData.map((question) => (
-        <div key={`quiz-${question.name}`} className="mb-3">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>{question.question}</Form.Label>
-          {question.answers.map((answer) => 
-              <Form.Check 
-              key={`${question.name}-${answer.value}`}
-              type="radio"
-              id={`${question.name}-${answer.value}`}
-              value={`${answer.value}`}
-              name={question.name}
-              label={`${answer.answer}`}
-              />
-          )}
-          </Form.Group>
-        </div>
-      ))}
-      <Button variant="outline-dark" type="submit">Get Your Strength</Button>
-    </Form>
-    {results}
-    </>
-  );
-}
+  // conditionally render
+  // only render if quiz exists!
+  let quiz = null;
+  if (!quizData) {
+    return 
+  } else {
+
+      return (
+        <>
+        <Form onSubmit={handleQuizSubmission}>
+          {quizData.map((question) => (
+            <div key={`quiz-${question.name}`} className="mb-3">
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>{question.question}</Form.Label>
+              {question.answers.map((answer) => 
+                  <Form.Check 
+                  key={`${question.name}-${answer.value}`}
+                  type="radio"
+                  id={`${question.name}-${answer.value}`}
+                  value={`${answer.value}`}
+                  name={question.name}
+                  label={`${answer.answer}`}
+                  />
+              )}
+              </Form.Group>
+            </div>
+          ))}
+          <Button variant="outline-dark" type="submit">Get Your Strength</Button>
+        </Form>
+        <br />
+        {results}
+        {/* TODO: add production recommendation / link */}
+        </>
+      );
+    }
+  }
+
 
 export default Quiz
