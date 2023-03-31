@@ -20,6 +20,36 @@ const PostSeedData = [
   photoCredit: "Tabitha Turner",
   featured: true,
   featureOrder: 2,
+  quizQuestions: [
+    {
+      question: "Sample Q",
+      name: "q1",
+      answers: [
+        {
+          answer: "Answer A",
+          value: "a"
+        },
+        {
+         answer: "Answer B",
+         value: "b"
+        },
+        {
+          answer: "Answer C",
+          value: "c"
+        },
+        {
+          answer: "Answer D",
+          value: "d"
+        }
+      ]
+    }
+  ],
+  quizKey: {
+    a: "WinnerA",
+    b: "WinnerB",
+    c: "WinnerC",
+    d: "WinnerD"
+  }
 },
 
 ]
