@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
+import Quiz from "./Quiz";
 
 const PostModal = (props) => {
+
   return (
     <Modal
       {...props}
@@ -23,7 +24,11 @@ const PostModal = (props) => {
           className="post"
           style={{width: '100%', marginBottom: `15px`}}
         />
-        <p>{props.post.tagline} coming soon!</p>
+        <p>{props.post.tagline}</p>
+        <Quiz 
+          quizData={props.post.quizQuestions}
+          quizKey={props.post.quizKey}/>
+  
       </Modal.Body>
       <Modal.Footer>
         <Button variant="outline-dark" onClick={props.onHide}>Close</Button>

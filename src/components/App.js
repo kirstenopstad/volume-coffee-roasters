@@ -8,12 +8,16 @@ import Container from 'react-bootstrap/Container';
 import FeaturedProduct from './FeaturedProduct';
 import FeaturedPosts from './FeaturedPosts';
 import Cart from './Cart';
+import posts from './PostSeedData'
 
 
 function App() {
   const [showBOH, setShowBOH] = useState(false);
   const [cart, setCart] = useState([]);
   const [cartSummary, setCartSummary] = useState({});
+  const [showPostModal, setShowPostModal] = useState(false);
+  const [selectedPost, setSelectedPost] = useState({});
+
 
   const toggleBOH = (showStatus) => {
     if (showStatus) {
@@ -21,6 +25,21 @@ function App() {
     } else {
       setShowBOH(true)
     }
+  }
+
+  const handlePostClick = (post) => {
+    setSelectedPost(post)
+    setShowPostModal(true)
+  }
+  
+  const handleHideModal = () => {
+    setShowPostModal(false)
+  }
+
+  const handleKnowYourStrengthClick = () => {
+    let quizPost = posts.filter(p => p.title === "Know Your Strength")[0]
+    setSelectedPost(quizPost);
+    setShowPostModal(true)
   }
 
   const handleAddToCart = (item) => {
@@ -131,7 +150,11 @@ function App() {
     main = 
     <>
     <FeaturedProduct />
-    <FeaturedPosts />
+    <FeaturedPosts 
+      handlePostClick={handlePostClick} 
+      selectedPost={selectedPost}
+      showPostModal={showPostModal}
+      handleHideModal={handleHideModal}/>
     <InventoryControl 
       showBOH={showBOH} 
       handleAddToCart={handleAddToCart}
@@ -158,7 +181,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header handleKnowYourStrengthClick={handleKnowYourStrengthClick}/>
       <Container>
         <div className='Site'>
           {main}

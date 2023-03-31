@@ -5,15 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Posts from './../components/PostSeedData'
 import arrowRight from './../img/icons/arrow-right.svg'
 import PostModal from "./PostModal";
+import PropTypes from 'prop-types'
 
-const FeaturedPosts = () => {
-  const [modalShow, setModalShow] = useState(false);
-  const [selectedPost, setSelectedPost] = useState({});
-
-  const handlePostClick = (post) => {
-    setSelectedPost(post)
-    setModalShow(true)
-  }
+const FeaturedPosts = ({ selectedPost, handlePostClick, showPostModal, handleHideModal}) => {
 
   return(
     <>
@@ -40,9 +34,9 @@ const FeaturedPosts = () => {
         </Col>
       )}
       <PostModal
-        show={modalShow}
+        show={showPostModal}
         post={selectedPost}
-        onHide={() => setModalShow(false)}
+        onHide={handleHideModal}
         />
       </Row>
     </Container>
@@ -50,5 +44,13 @@ const FeaturedPosts = () => {
     
   )
 }
+
+FeaturedPosts.propTypes = {
+  selectedPost: PropTypes.object,
+  showPostModal: PropTypes.bool,
+  handlePostClick: PropTypes.func,
+  handleHideModal: PropTypes.func
+}
+
 
 export default FeaturedPosts;
