@@ -1,4 +1,4 @@
-# Volume Coffee Roasters
+# [Volume Coffee Roasters](https://kirstenopstad.github.io/volume-coffee-roasters)
 
 #### By Kirsten Opstad
 
@@ -11,7 +11,11 @@
 
 ## Description
 
-Volume Coffee Roasters is a fictional coffee roastery web app that includes a FOH (Front of House) and BOH (Back of House) area. This iteration of the project takes the BOH structure from a previous project ([Live Site](https://kirstenopstad.github.io/local-business/) | [GitHub](https://github.com/kirstenopstad/local-business)) and adds customer-facing features.
+Volume Coffee Roasters is a fictional coffee roastery web app that includes a FOH (Front of House) and BOH (Back of House) area. This iteration of the project takes the BOH structure from a previous project and adds customer-facing features.
+
+How it started: ([Live Site](https://kirstenopstad.github.io/local-business/) | [GitHub](https://github.com/kirstenopstad/local-business))
+
+How it's going: ([Live Site](https://kirstenopstad.github.io/volume-coffee-roasters) | [GitHub](https://github.com/kirstenopstad/volume-coffee-roasters))
 
 ***
 ## Technologies Used
@@ -55,8 +59,8 @@ __BOH User Stories:__
 ### __Further Exploration (Stretch Goals)__
 
 __FOH User Stories (Stretch):__
-* As a FOH user, I want to see a featured blend with a link to purchase 
-* As a FOH user, I want to be able to click to:
+* ✅ As a FOH user, I want to see a featured blend with a link to purchase 
+* ✅ As a FOH user, I want to be able to click to:
     * ✅ view blog details
     * ✅ take Know Your Strength quiz.
 * ✅ As a FOH user, I want to be able to 
@@ -102,12 +106,18 @@ __BOH User Stories (Stretch):__
     <!-- * ✅ Local State to display either list, detail or add
     * ✅ Shared State to allow Create & Update Functionality -->
 5. ✅ Style to match mockup
+6. Next Steps: 
+    * Add database so data persists in realtime across many devices
+    * Add authentication for single 'admin' user
+    * Buid "Checkout" UI 
+    * Add POS API connection
 
 ***
 ## Goals
 1. ✅ Meet MVP
 2. ✅ Stretch: build cart feature
 3. ✅ Stretch: build Know Your Strength quiz
+4. Implement Next Steps
 
 ***
 ## Setup/Installation Requirements
