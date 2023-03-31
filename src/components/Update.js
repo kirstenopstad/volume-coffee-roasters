@@ -13,7 +13,7 @@ const Update = ({ item, onUpdateSubmit, toggleShowUpdateForm, onClose }) => {
       origin: (event.target.origin.value) ? (event.target.origin.value): name,
       price: (parseInt(event.target.price.value)) ? (parseInt(event.target.price.value)): price,
       roast: (event.target.roast.value) ? (event.target.roast.value): roast,
-      poundsInStock: (parseInt(event.target.pounds.value) ? (parseInt(event.target.pounds.value)): poundsInStock),
+      poundsInStock: (parseInt(event.target.poundsInStock.value) ? (parseInt(event.target.poundsInStock.value)): poundsInStock),
       image: image,
       summary: (event.target.summary.value) ? (event.target.summary.value): summary, 
       id: id
@@ -31,27 +31,27 @@ const Update = ({ item, onUpdateSubmit, toggleShowUpdateForm, onClose }) => {
       <Form onSubmit={handleFormSubmission}>
         <Form.Group className="mb-3">
             <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder={name} name="name" />
+            <Form.Control type="text" placeholder={name} name="name"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Origin</Form.Label>
-            <Form.Control type="text" placeholder={origin} name="origin" />
+            <Form.Control type="text" placeholder={origin} name="origin"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Price</Form.Label>
-            <Form.Control type="text" placeholder={price} name="price" />
+            <Form.Control type="text" placeholder={price} name="price"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Roast</Form.Label>
-            <Form.Control type="text" placeholder={roast} name="roast" />
+            <Form.Control type="text" placeholder={roast} name="roast"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>PoundsInStock</Form.Label>
-            <Form.Control type="text" placeholder={poundsInStock} name="poundsInStock" />
+            <Form.Control type="text" placeholder={poundsInStock} name="poundsInStock"/>
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Summary</Form.Label>
-            <Form.Control type="text" placeholder={summary} name="summary" />
+            <Form.Control type="text" placeholder={summary} name="summary"/>
         </Form.Group>
         <Button type="submit" variant="outline-dark">Update</Button>
       </Form>

@@ -31,23 +31,23 @@ const Add = ({ onAddClick }) => {
       <Form onSubmit={handleFormSubmission}>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
-          <Form.Control placeholder="French Roast" name="name" />
+          <Form.Control placeholder="French Roast" name="name" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Origin</Form.Label>
-          <Form.Control placeholder="Single Origin / Blend" name="origin" />
+          <Form.Control placeholder="Single Origin / Blend" name="origin" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Price</Form.Label>
-          <Form.Control type="price" placeholder="$17" name="price" />
+          <Form.Control type="price" placeholder="$17" name="price" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Roast</Form.Label>
-          <Form.Control placeholder="Dark, Medium, Light" name="roast" />
+          <Form.Control placeholder="Dark, Medium, Light" name="roast" required/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Profile</Form.Label>
-          <Form.Control as="textarea" rows={3} placeholder="Describe the flavor profile." name="summary" />
+          <Form.Control as="textarea" rows={3} placeholder="Describe the flavor profile." name="summary" required/>
         </Form.Group>
         <Button type="submit" variant="outline-dark">Add</Button>
       </Form>
