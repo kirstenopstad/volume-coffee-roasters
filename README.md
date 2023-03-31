@@ -38,7 +38,7 @@ At Volume Coffee Roasters, we use the FOH part of our web app to sell coffee bea
 __User Storeis:__
 
 * ✅ As a user, I want to be able to toggle between FOH and BOH
-* ✅  As a user, I want the site to be easy to use and nicely styled
+* ✅ As a user, I want the site to be easy to use and nicely styled
 
 __FOH User Stories:__
 * ✅ As a FOH user, I want to first see a Landing page (area) that includes a bold, call-to-action to allow customers to subscribe to our mailing list in two clicks.
@@ -55,13 +55,15 @@ __BOH User Stories:__
 ### __Further Exploration (Stretch Goals)__
 
 __FOH User Stories (Stretch):__
-* As a FOH user, I want to see a featured blend with a link to purchase
-* As a FOH user, I want to be able to click to view blog details and take Know Your Strength quiz.
-* As a FOH user, I want to be able to 
-  * Add items to a cart
-  * Remove items from a cart
-  * Change quantites of items in cart
-  * View cart summary
+* As a FOH user, I want to see a featured blend with a link to purchase 
+* As a FOH user, I want to be able to click to:
+    * ✅ view blog details
+    * take Know Your Strength quiz.
+* ✅ As a FOH user, I want to be able to 
+  * ✅ Add items to a cart
+  * ✅ Remove items from a cart
+  * ✅ Change quantites of items in cart
+  * ✅ View cart summary
 
 __BOH User Stories (Stretch):__
 * ✅ As a user, I want the option to edit a coffee sack's properties after entering them just in case I make a mistake.
@@ -96,17 +98,17 @@ __BOH User Stories (Stretch):__
         * ✅ Add.js – form to add new item to inventory
         * Strech Components
         * Edit.js – form to edit item in inventory -->
-3. Build New Static Components
-4. Add State
+3. ✅ Build New Static Components
+4. ✅ Add State
     <!-- * ✅ Local State to display either list, detail or add
     * ✅ Shared State to allow Create & Update Functionality -->
-5. Style to match mockup
+5. ✅ Style to match mockup
 
 ***
 ## Goals
 1. ✅ Meet MVP
-2. 📌 Stretch: build cart feature
-3. Stretch: build Know Your Strength quiz
+2. ✅ Stretch: build cart feature
+3. 📌 Stretch: build Know Your Strength quiz
 
 ***
 ## Setup/Installation Requirements
