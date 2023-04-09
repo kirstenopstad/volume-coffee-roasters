@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/volume-coffee-roasters/static/css/main.a98d1ce7.css",
+    "main.css": "/volume-coffee-roasters/static/css/main.5af1f6bc.css",
     "main.js": "/volume-coffee-roasters/static/js/main.8a8cc39d.js",
     "static/js/787.6ef96f59.chunk.js": "/volume-coffee-roasters/static/js/787.6ef96f59.chunk.js",
     "static/media/farmer.jpg": "/volume-coffee-roasters/static/media/farmer.e4efa7aa005ca1fd04bf.jpg",
@@ -13,8 +13,10 @@
     "static/media/holler-mtn.png": "/volume-coffee-roasters/static/media/holler-mtn.8948e245f43d7881525d.png",
     "static/media/featuredProduct.jpg": "/volume-coffee-roasters/static/media/featuredProduct.9f7b771632a6cf358878.jpg",
     "static/media/placeholder.png": "/volume-coffee-roasters/static/media/placeholder.78a682d093226176fdb4.png",
+    "static/media/beans-md.jpg": "/volume-coffee-roasters/static/media/beans-md.101f269645633f824e74.jpg",
     "static/media/coffee-coffee-time.gif": "/volume-coffee-roasters/static/media/coffee-coffee-time.0cef16f0178e0adec1a5.gif",
     "static/media/espresso_machine.jpg": "/volume-coffee-roasters/static/media/espresso_machine.712acf42a41b89a3a45f.jpg",
+    "static/media/beans-sm.jpg": "/volume-coffee-roasters/static/media/beans-sm.b762fca09028d7aa6764.jpg",
     "static/media/WindsorRegular.ttf": "/volume-coffee-roasters/static/media/WindsorRegular.840c15634e5c3949742b.ttf",
     "static/media/logo.png": "/volume-coffee-roasters/static/media/logo.c3adbcc0cd7c76b06b35.png",
     "index.html": "/volume-coffee-roasters/index.html",
@@ -24,12 +26,12 @@
     "static/media/plus-lg.svg": "/volume-coffee-roasters/static/media/plus-lg.84478f1596d8d93aef242201a227b42b.svg",
     "static/media/plus.svg": "/volume-coffee-roasters/static/media/plus.5e21677fab6dd6aa113b48228e6b020f.svg",
     "static/media/dash.svg": "/volume-coffee-roasters/static/media/dash.65839a533f71244229a42bc86ce0ac46.svg",
-    "main.a98d1ce7.css.map": "/volume-coffee-roasters/static/css/main.a98d1ce7.css.map",
+    "main.5af1f6bc.css.map": "/volume-coffee-roasters/static/css/main.5af1f6bc.css.map",
     "main.8a8cc39d.js.map": "/volume-coffee-roasters/static/js/main.8a8cc39d.js.map",
     "787.6ef96f59.chunk.js.map": "/volume-coffee-roasters/static/js/787.6ef96f59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a98d1ce7.css",
+    "static/css/main.5af1f6bc.css",
     "static/js/main.8a8cc39d.js"
   ]
 }
