@@ -83,34 +83,15 @@ p {
 }
 
 .hero-mask {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: content-box;
   background-position-y: 50%;
   background-position-x: 50%;
   /* parallax! */
-  background-attachment: fixed;
-  background-position: center;
-}
-
-/* resize parallax image for mobile */
-@media (max-width: 480px) {
-  .hero-mask {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans-sm.jpg);
-  }
-}
-
-/* resize parallax image for tablet */
-@media (min-width: 481px) and (max-width: 1024px)  {
-  .hero-mask {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans-md.jpg);
-  }
-}
-/* resize parallax image for desktop */
-@media (min-width: 1025px) {
-  .hero-mask {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/stock/beans.jpg);
- }
+  /* background-attachment: fixed;
+  background-position: center; */
 }
 
 .hero h1, span, p {
