@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/volume-coffee-roasters/static/css/main.5af1f6bc.css",
+    "main.css": "/volume-coffee-roasters/static/css/main.ed65ec65.css",
     "main.js": "/volume-coffee-roasters/static/js/main.8a8cc39d.js",
     "static/js/787.6ef96f59.chunk.js": "/volume-coffee-roasters/static/js/787.6ef96f59.chunk.js",
     "static/media/farmer.jpg": "/volume-coffee-roasters/static/media/farmer.e4efa7aa005ca1fd04bf.jpg",
@@ -26,12 +26,12 @@
     "static/media/plus-lg.svg": "/volume-coffee-roasters/static/media/plus-lg.84478f1596d8d93aef242201a227b42b.svg",
     "static/media/plus.svg": "/volume-coffee-roasters/static/media/plus.5e21677fab6dd6aa113b48228e6b020f.svg",
     "static/media/dash.svg": "/volume-coffee-roasters/static/media/dash.65839a533f71244229a42bc86ce0ac46.svg",
-    "main.5af1f6bc.css.map": "/volume-coffee-roasters/static/css/main.5af1f6bc.css.map",
+    "main.ed65ec65.css.map": "/volume-coffee-roasters/static/css/main.ed65ec65.css.map",
     "main.8a8cc39d.js.map": "/volume-coffee-roasters/static/js/main.8a8cc39d.js.map",
     "787.6ef96f59.chunk.js.map": "/volume-coffee-roasters/static/js/787.6ef96f59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5af1f6bc.css",
+    "static/css/main.ed65ec65.css",
     "static/js/main.8a8cc39d.js"
   ]
 }
